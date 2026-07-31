@@ -1,0 +1,36 @@
+﻿{
+  "name": "SaaS-Foundry Observability Implementation",
+  "version": "1.0",
+  "artifacts": [
+    {
+      "id": "OBS-000",
+      "title": "Observability Foundation",
+      "templatePath": "src/SaaSFoundry.EngineeringWorkbench.Builder/Templates/observability/OBS-000.md.template",
+      "outputPath": "output/OBS-000.md",
+      "metadata": {
+        "Title": "Observability Foundation",
+        "Version": "1.0"
+      }
+    },
+    {
+      "id": "OBS-001",
+      "title": "OpenTelemetry Architecture",
+      "templatePath": "src/SaaSFoundry.EngineeringWorkbench.Builder/Templates/observability/OBS-001.md.template",
+      "outputPath": "output/OBS-001.md",
+      "metadata": {
+        "Title": "OpenTelemetry Architecture",
+        "Version": "1.0"
+      }
+    },
+    {
+      "id": "OBS-002",
+      "title": "Instrumentation Standards",
+      "templatePath": "src/SaaSFoundry.EngineeringWorkbench.Builder/Templates/observability/OBS-002.md.template",
+      "outputPath": "output/OBS-002.md",
+      "metadata": {
+        "Title": "Instrumentation Standards",
+        "Version": "1.0"
+      }
+    }
+  ]
+}

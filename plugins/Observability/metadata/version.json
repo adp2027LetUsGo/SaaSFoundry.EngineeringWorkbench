@@ -1,0 +1,6 @@
+﻿{
+  "plugin": "observability",
+  "version": "1.0.0",
+  "workbenchCompatibility": "1.x",
+  "status": "production-ready"
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "observability",
+  "name": "SaaS-Foundry Observability Plugin",
+  "version": "2.0",
+
+  "catalog":
+  "catalog/observability.catalog.json",
+
+  "templateRoots":
+  {
+    "canonical":
+    "templates/canonical",
+
+    "implementation":
+    "templates/implementation"
+  }
+}

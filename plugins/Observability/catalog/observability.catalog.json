@@ -1,0 +1,1808 @@
+﻿{
+    "documents":  [
+                      {
+                          "id":  "OBS-000",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-100"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-000"
+                      },
+                      {
+                          "id":  "OBS-001",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-101"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-001"
+                      },
+                      {
+                          "id":  "OBS-002",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-102"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-002"
+                      },
+                      {
+                          "id":  "OBS-003",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-103"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-003"
+                      },
+                      {
+                          "id":  "OBS-004",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-104"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-004"
+                      },
+                      {
+                          "id":  "OBS-005",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-105"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-005"
+                      },
+                      {
+                          "id":  "OBS-006",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-106"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-006"
+                      },
+                      {
+                          "id":  "OBS-007",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-107"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-007"
+                      },
+                      {
+                          "id":  "OBS-008",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-108"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-008"
+                      },
+                      {
+                          "id":  "OBS-009",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-109"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-009"
+                      },
+                      {
+                          "id":  "OBS-010",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-110"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-010"
+                      },
+                      {
+                          "id":  "OBS-011",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-111"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-011"
+                      },
+                      {
+                          "id":  "OBS-012",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-112"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-012"
+                      },
+                      {
+                          "id":  "OBS-013",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-113"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-013"
+                      },
+                      {
+                          "id":  "OBS-014",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-114"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-014"
+                      },
+                      {
+                          "id":  "OBS-015",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-115"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-015"
+                      },
+                      {
+                          "id":  "OBS-016",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-116"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-016"
+                      },
+                      {
+                          "id":  "OBS-017",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-117"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-017"
+                      },
+                      {
+                          "id":  "OBS-018",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-118"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-018"
+                      },
+                      {
+                          "id":  "OBS-019",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-119"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-019"
+                      },
+                      {
+                          "id":  "OBS-020",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-120"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-020"
+                      },
+                      {
+                          "id":  "OBS-021",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-121"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-021"
+                      },
+                      {
+                          "id":  "OBS-022",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-122"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-022"
+                      },
+                      {
+                          "id":  "OBS-023",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-123"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-023"
+                      },
+                      {
+                          "id":  "OBS-024",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-124"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-024"
+                      },
+                      {
+                          "id":  "OBS-025",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-125"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-025"
+                      },
+                      {
+                          "id":  "OBS-026",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-126"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-026"
+                      },
+                      {
+                          "id":  "OBS-027",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-127"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-027"
+                      },
+                      {
+                          "id":  "OBS-028",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-128"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-028"
+                      },
+                      {
+                          "id":  "OBS-029",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-129"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-029"
+                      },
+                      {
+                          "id":  "OBS-030",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-130"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-030"
+                      },
+                      {
+                          "id":  "OBS-031",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-131"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-031"
+                      },
+                      {
+                          "id":  "OBS-032",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-132"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-032"
+                      },
+                      {
+                          "id":  "OBS-033",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-133"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-033"
+                      },
+                      {
+                          "id":  "OBS-034",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-134"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-034"
+                      },
+                      {
+                          "id":  "OBS-035",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-135"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-035"
+                      },
+                      {
+                          "id":  "OBS-036",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-136"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-036"
+                      },
+                      {
+                          "id":  "OBS-037",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-137"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-037"
+                      },
+                      {
+                          "id":  "OBS-038",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-138"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-038"
+                      },
+                      {
+                          "id":  "OBS-039",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-139"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-039"
+                      },
+                      {
+                          "id":  "OBS-040",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-140"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-040"
+                      },
+                      {
+                          "id":  "OBS-041",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-141"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-041"
+                      },
+                      {
+                          "id":  "OBS-042",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-142"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-042"
+                      },
+                      {
+                          "id":  "OBS-043",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-143"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-043"
+                      },
+                      {
+                          "id":  "OBS-044",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-144"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-044"
+                      },
+                      {
+                          "id":  "OBS-045",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-145"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-045"
+                      },
+                      {
+                          "id":  "OBS-046",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-146"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-046"
+                      },
+                      {
+                          "id":  "OBS-047",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-147"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-047"
+                      },
+                      {
+                          "id":  "OBS-048",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-148"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-048"
+                      },
+                      {
+                          "id":  "OBS-049",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-149"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-049"
+                      },
+                      {
+                          "id":  "OBS-050",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-150"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-050"
+                      },
+                      {
+                          "id":  "OBS-051",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-151"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-051"
+                      },
+                      {
+                          "id":  "OBS-052",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-152"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-052"
+                      },
+                      {
+                          "id":  "OBS-053",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-153"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-053"
+                      },
+                      {
+                          "id":  "OBS-054",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-154"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-054"
+                      },
+                      {
+                          "id":  "OBS-055",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-155"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-055"
+                      },
+                      {
+                          "id":  "OBS-056",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-156"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-056"
+                      },
+                      {
+                          "id":  "OBS-057",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-157"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-057"
+                      },
+                      {
+                          "id":  "OBS-058",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-158"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-058"
+                      },
+                      {
+                          "id":  "OBS-059",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-159"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-059"
+                      },
+                      {
+                          "id":  "OBS-060",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-160"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-060"
+                      },
+                      {
+                          "id":  "OBS-061",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-161"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-061"
+                      },
+                      {
+                          "id":  "OBS-062",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-162"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-062"
+                      },
+                      {
+                          "id":  "OBS-063",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-163"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-063"
+                      },
+                      {
+                          "id":  "OBS-064",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-164"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-064"
+                      },
+                      {
+                          "id":  "OBS-065",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-165"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-065"
+                      },
+                      {
+                          "id":  "OBS-066",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-166"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-066"
+                      },
+                      {
+                          "id":  "OBS-067",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-167"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-067"
+                      },
+                      {
+                          "id":  "OBS-068",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-168"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-068"
+                      },
+                      {
+                          "id":  "OBS-069",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-169"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-069"
+                      },
+                      {
+                          "id":  "OBS-070",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-170"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-070"
+                      },
+                      {
+                          "id":  "OBS-071",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-171"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-071"
+                      },
+                      {
+                          "id":  "OBS-072",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-172"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-072"
+                      },
+                      {
+                          "id":  "OBS-073",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-173"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-073"
+                      },
+                      {
+                          "id":  "OBS-074",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-174"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-074"
+                      },
+                      {
+                          "id":  "OBS-075",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-175"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-075"
+                      },
+                      {
+                          "id":  "OBS-076",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-176"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-076"
+                      },
+                      {
+                          "id":  "OBS-077",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-177"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-077"
+                      },
+                      {
+                          "id":  "OBS-078",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-178"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-078"
+                      },
+                      {
+                          "id":  "OBS-079",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-179"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-079"
+                      },
+                      {
+                          "id":  "OBS-080",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-180"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-080"
+                      },
+                      {
+                          "id":  "OBS-081",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-181"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-081"
+                      },
+                      {
+                          "id":  "OBS-082",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-182"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-082"
+                      },
+                      {
+                          "id":  "OBS-083",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-183"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-083"
+                      },
+                      {
+                          "id":  "OBS-084",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-184"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-084"
+                      },
+                      {
+                          "id":  "OBS-085",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-185"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-085"
+                      },
+                      {
+                          "id":  "OBS-086",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-186"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-086"
+                      },
+                      {
+                          "id":  "OBS-087",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-187"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-087"
+                      },
+                      {
+                          "id":  "OBS-088",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-188"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-088"
+                      },
+                      {
+                          "id":  "OBS-089",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-189"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-089"
+                      },
+                      {
+                          "id":  "OBS-090",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-190"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-090"
+                      },
+                      {
+                          "id":  "OBS-091",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-191"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-091"
+                      },
+                      {
+                          "id":  "OBS-092",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-192"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-092"
+                      },
+                      {
+                          "id":  "OBS-093",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-193"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-093"
+                      },
+                      {
+                          "id":  "OBS-094",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-194"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-094"
+                      },
+                      {
+                          "id":  "OBS-095",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-195"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-095"
+                      },
+                      {
+                          "id":  "OBS-096",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-196"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-096"
+                      },
+                      {
+                          "id":  "OBS-097",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-197"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-097"
+                      },
+                      {
+                          "id":  "OBS-098",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-198"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-098"
+                      },
+                      {
+                          "id":  "OBS-099",
+                          "templateGroup":  "canonical",
+                          "implementationLinks":  [
+                                                      "OBS-199"
+                                                  ],
+                          "layer":  "Architecture",
+                          "category":  "Canonical Architecture",
+                          "title":  "Observability Canonical Architecture OBS-099"
+                      },
+                      {
+                          "id":  "OBS-100",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-000",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-100"
+                      },
+                      {
+                          "id":  "OBS-101",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-001",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-101"
+                      },
+                      {
+                          "id":  "OBS-102",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-002",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-102"
+                      },
+                      {
+                          "id":  "OBS-103",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-003",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-103"
+                      },
+                      {
+                          "id":  "OBS-104",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-004",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-104"
+                      },
+                      {
+                          "id":  "OBS-105",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-005",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-105"
+                      },
+                      {
+                          "id":  "OBS-106",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-006",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-106"
+                      },
+                      {
+                          "id":  "OBS-107",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-007",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-107"
+                      },
+                      {
+                          "id":  "OBS-108",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-008",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-108"
+                      },
+                      {
+                          "id":  "OBS-109",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-009",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-109"
+                      },
+                      {
+                          "id":  "OBS-110",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-010",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-110"
+                      },
+                      {
+                          "id":  "OBS-111",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-011",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-111"
+                      },
+                      {
+                          "id":  "OBS-112",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-012",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-112"
+                      },
+                      {
+                          "id":  "OBS-113",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-013",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-113"
+                      },
+                      {
+                          "id":  "OBS-114",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-014",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-114"
+                      },
+                      {
+                          "id":  "OBS-115",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-015",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-115"
+                      },
+                      {
+                          "id":  "OBS-116",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-016",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-116"
+                      },
+                      {
+                          "id":  "OBS-117",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-017",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-117"
+                      },
+                      {
+                          "id":  "OBS-118",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-018",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-118"
+                      },
+                      {
+                          "id":  "OBS-119",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-019",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-119"
+                      },
+                      {
+                          "id":  "OBS-120",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-020",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-120"
+                      },
+                      {
+                          "id":  "OBS-121",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-021",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-121"
+                      },
+                      {
+                          "id":  "OBS-122",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-022",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-122"
+                      },
+                      {
+                          "id":  "OBS-123",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-023",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-123"
+                      },
+                      {
+                          "id":  "OBS-124",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-024",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-124"
+                      },
+                      {
+                          "id":  "OBS-125",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-025",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-125"
+                      },
+                      {
+                          "id":  "OBS-126",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-026",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-126"
+                      },
+                      {
+                          "id":  "OBS-127",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-027",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-127"
+                      },
+                      {
+                          "id":  "OBS-128",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-028",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-128"
+                      },
+                      {
+                          "id":  "OBS-129",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-029",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-129"
+                      },
+                      {
+                          "id":  "OBS-130",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-030",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-130"
+                      },
+                      {
+                          "id":  "OBS-131",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-031",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-131"
+                      },
+                      {
+                          "id":  "OBS-132",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-032",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-132"
+                      },
+                      {
+                          "id":  "OBS-133",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-033",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-133"
+                      },
+                      {
+                          "id":  "OBS-134",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-034",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-134"
+                      },
+                      {
+                          "id":  "OBS-135",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-035",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-135"
+                      },
+                      {
+                          "id":  "OBS-136",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-036",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-136"
+                      },
+                      {
+                          "id":  "OBS-137",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-037",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-137"
+                      },
+                      {
+                          "id":  "OBS-138",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-038",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-138"
+                      },
+                      {
+                          "id":  "OBS-139",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-039",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-139"
+                      },
+                      {
+                          "id":  "OBS-140",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-040",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-140"
+                      },
+                      {
+                          "id":  "OBS-141",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-041",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-141"
+                      },
+                      {
+                          "id":  "OBS-142",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-042",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-142"
+                      },
+                      {
+                          "id":  "OBS-143",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-043",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-143"
+                      },
+                      {
+                          "id":  "OBS-144",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-044",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-144"
+                      },
+                      {
+                          "id":  "OBS-145",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-045",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-145"
+                      },
+                      {
+                          "id":  "OBS-146",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-046",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-146"
+                      },
+                      {
+                          "id":  "OBS-147",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-047",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-147"
+                      },
+                      {
+                          "id":  "OBS-148",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-048",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-148"
+                      },
+                      {
+                          "id":  "OBS-149",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-049",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-149"
+                      },
+                      {
+                          "id":  "OBS-150",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-050",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-150"
+                      },
+                      {
+                          "id":  "OBS-151",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-051",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-151"
+                      },
+                      {
+                          "id":  "OBS-152",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-052",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-152"
+                      },
+                      {
+                          "id":  "OBS-153",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-053",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-153"
+                      },
+                      {
+                          "id":  "OBS-154",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-054",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-154"
+                      },
+                      {
+                          "id":  "OBS-155",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-055",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-155"
+                      },
+                      {
+                          "id":  "OBS-156",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-056",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-156"
+                      },
+                      {
+                          "id":  "OBS-157",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-057",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-157"
+                      },
+                      {
+                          "id":  "OBS-158",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-058",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-158"
+                      },
+                      {
+                          "id":  "OBS-159",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-059",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-159"
+                      },
+                      {
+                          "id":  "OBS-160",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-060",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-160"
+                      },
+                      {
+                          "id":  "OBS-161",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-061",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-161"
+                      },
+                      {
+                          "id":  "OBS-162",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-062",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-162"
+                      },
+                      {
+                          "id":  "OBS-163",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-063",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-163"
+                      },
+                      {
+                          "id":  "OBS-164",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-064",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-164"
+                      },
+                      {
+                          "id":  "OBS-165",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-065",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-165"
+                      },
+                      {
+                          "id":  "OBS-166",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-066",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-166"
+                      },
+                      {
+                          "id":  "OBS-167",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-067",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-167"
+                      },
+                      {
+                          "id":  "OBS-168",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-068",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-168"
+                      },
+                      {
+                          "id":  "OBS-169",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-069",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-169"
+                      },
+                      {
+                          "id":  "OBS-170",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-070",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-170"
+                      },
+                      {
+                          "id":  "OBS-171",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-071",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-171"
+                      },
+                      {
+                          "id":  "OBS-172",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-072",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-172"
+                      },
+                      {
+                          "id":  "OBS-173",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-073",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-173"
+                      },
+                      {
+                          "id":  "OBS-174",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-074",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-174"
+                      },
+                      {
+                          "id":  "OBS-175",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-075",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-175"
+                      },
+                      {
+                          "id":  "OBS-176",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-076",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-176"
+                      },
+                      {
+                          "id":  "OBS-177",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-077",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-177"
+                      },
+                      {
+                          "id":  "OBS-178",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-078",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-178"
+                      },
+                      {
+                          "id":  "OBS-179",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-079",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-179"
+                      },
+                      {
+                          "id":  "OBS-180",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-080",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-180"
+                      },
+                      {
+                          "id":  "OBS-181",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-081",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-181"
+                      },
+                      {
+                          "id":  "OBS-182",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-082",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-182"
+                      },
+                      {
+                          "id":  "OBS-183",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-083",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-183"
+                      },
+                      {
+                          "id":  "OBS-184",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-084",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-184"
+                      },
+                      {
+                          "id":  "OBS-185",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-085",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-185"
+                      },
+                      {
+                          "id":  "OBS-186",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-086",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-186"
+                      },
+                      {
+                          "id":  "OBS-187",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-087",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-187"
+                      },
+                      {
+                          "id":  "OBS-188",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-088",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-188"
+                      },
+                      {
+                          "id":  "OBS-189",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-089",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-189"
+                      },
+                      {
+                          "id":  "OBS-190",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-090",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-190"
+                      },
+                      {
+                          "id":  "OBS-191",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-091",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-191"
+                      },
+                      {
+                          "id":  "OBS-192",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-092",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-192"
+                      },
+                      {
+                          "id":  "OBS-193",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-093",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-193"
+                      },
+                      {
+                          "id":  "OBS-194",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-094",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-194"
+                      },
+                      {
+                          "id":  "OBS-195",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-095",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-195"
+                      },
+                      {
+                          "id":  "OBS-196",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-096",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-196"
+                      },
+                      {
+                          "id":  "OBS-197",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-097",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-197"
+                      },
+                      {
+                          "id":  "OBS-198",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-098",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-198"
+                      },
+                      {
+                          "id":  "OBS-199",
+                          "templateGroup":  "implementation",
+                          "canonicalReference":  "OBS-099",
+                          "layer":  "Implementation",
+                          "category":  "Engineering Implementation",
+                          "title":  "Observability Engineering Implementation OBS-199"
+                      }
+                  ],
+    "plugin":  "observability",
+    "description":  "SaaS-Foundry Observability Master Catalog",
+    "version":  "3.0",
+    "documentCount":  200
+}

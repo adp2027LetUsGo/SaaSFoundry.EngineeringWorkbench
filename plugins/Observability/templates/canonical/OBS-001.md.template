@@ -1,0 +1,10 @@
+﻿# {{Title}}
+
+Document ID: {{Id}}
+
+Category:
+{{Category}}
+
+## OpenTelemetry Architecture
+
+Canonical architecture definition.

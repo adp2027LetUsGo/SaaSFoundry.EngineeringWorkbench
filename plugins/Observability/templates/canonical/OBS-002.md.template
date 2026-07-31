@@ -1,0 +1,32 @@
+﻿# {{Title}}
+
+Document ID: {{Id}}
+
+Category:
+{{Category}}
+
+Version:
+{{Version}}
+
+## Telemetry Data Model
+
+Defines the canonical telemetry data model.
+
+## Signals
+
+- Traces
+- Metrics
+- Logs
+
+## Correlation
+
+All telemetry artifacts must support:
+
+- Trace correlation
+- Service identification
+- Tenant context
+- Request context
+
+## Standard
+
+OpenTelemetry semantic conventions are the baseline.

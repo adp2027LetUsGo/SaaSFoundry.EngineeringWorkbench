@@ -1,0 +1,17 @@
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.deps.json
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.AssemblyInfoInputs.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.AssemblyInfo.cs
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.csproj.CoreCompileInputs.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\refint\SaaSFoundry.EngineeringWorkbench.Builder.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\ref\SaaSFoundry.EngineeringWorkbench.Builder.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Core.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Core.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Builder.csproj.AssemblyReference.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\obj\Debug\net10.0\SaaSFoun.03A0CF17.Up2Date
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Application.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Builder\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Application.pdb

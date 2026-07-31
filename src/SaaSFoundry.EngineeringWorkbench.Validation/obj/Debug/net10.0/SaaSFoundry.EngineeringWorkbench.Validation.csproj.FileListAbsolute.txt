@@ -1,0 +1,17 @@
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.deps.json
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Application.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Core.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Application.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\bin\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Core.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.csproj.AssemblyReference.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.AssemblyInfoInputs.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.AssemblyInfo.cs
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.csproj.CoreCompileInputs.cache
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoun.EEE4C312.Up2Date
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\refint\SaaSFoundry.EngineeringWorkbench.Validation.dll
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\SaaSFoundry.EngineeringWorkbench.Validation.pdb
+C:\Users\armando\Documents\_AHS\projects\Utilitarios\SaaSFoundry.EngineeringWorkbench\src\SaaSFoundry.EngineeringWorkbench.Validation\obj\Debug\net10.0\ref\SaaSFoundry.EngineeringWorkbench.Validation.dll

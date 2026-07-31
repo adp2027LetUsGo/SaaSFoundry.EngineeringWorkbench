@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>14</LangVersion>
+  </PropertyGroup>
+
+  <!-- Apply Native AOT only to executable hosts as specified in constraints -->
+  <PropertyGroup Condition="'$(OutputType)' == 'Exe'">
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+</Project>
