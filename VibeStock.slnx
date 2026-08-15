@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VibeStock.Bridge.Cell/VibeStock.Bridge.Cell.csproj" />
+    <Project Path="src/VibeStock.Core.Cell/VibeStock.Core.Cell.csproj" />
+    <Project Path="src/VibeStock.Ingestor.Cell/VibeStock.Ingestor.Cell.csproj" />
+    <Project Path="src/VibeStock.System.Cell/VibeStock.System.Cell.csproj" />
+  </Folder>
+</Solution>

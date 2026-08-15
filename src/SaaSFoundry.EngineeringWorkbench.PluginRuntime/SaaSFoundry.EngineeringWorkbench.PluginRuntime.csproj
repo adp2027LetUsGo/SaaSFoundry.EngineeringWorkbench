@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Application\SaaSFoundry.EngineeringWorkbench.Application.csproj" />
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
   </ItemGroup>
 

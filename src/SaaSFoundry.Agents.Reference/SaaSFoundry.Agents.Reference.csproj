@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Observability\SaaSFoundry.Plugins.Observability.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.AgentGovernance\SaaSFoundry.EngineeringWorkbench.AgentGovernance.csproj" />
+  </ItemGroup>
+
+</Project>

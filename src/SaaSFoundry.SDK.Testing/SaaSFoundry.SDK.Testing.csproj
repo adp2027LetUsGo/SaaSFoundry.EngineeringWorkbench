@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <EnableAotAnalyzer>true</EnableAotAnalyzer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaaSFoundry.SDK.Core\SaaSFoundry.SDK.Core.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.SDK.Plugins\SaaSFoundry.SDK.Plugins.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.SDK.Validation\SaaSFoundry.SDK.Validation.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.SDK.Packaging\SaaSFoundry.SDK.Packaging.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
+  </ItemGroup>
+
+</Project>

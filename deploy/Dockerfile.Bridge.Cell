@@ -1,0 +1,30 @@
+# VibeStock Bridge.Cell — NativeAOT container image
+# Hosts: Shopify GraphQL adapter, product publish, variant/inventory sync
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0 AS runtime
+
+WORKDIR /app
+
+# Copy the NativeAOT self-contained binary produced by:
+#   dotnet publish src/VibeStock.Bridge.Cell -c Release /p:PublishAot=true -r linux-x64
+COPY --chown=app:app publish/VibeStock.Bridge.Cell /app/VibeStock.Bridge.Cell
+
+RUN chmod +x /app/VibeStock.Bridge.Cell
+
+# Run as a non-root user
+RUN groupadd -r app && useradd -r -g app app
+USER app
+
+# Required environment variables (no defaults — must be supplied externally):
+#   DATABASE__CONNECTIONSTRING       — PostgreSQL connection string (secret)
+#   SHOPIFY__ACCESSTOKEN             — Shopify Admin API token (secret)
+#   SHOPIFY__BASEURL                 — Shopify store URL (e.g. https://mystore.myshopify.com)
+#   OTLP__ENDPOINT                   — OpenTelemetry OTLP gRPC endpoint
+#   GRPC__HOST                       — Listen host for gRPC transport
+#   GRPC__PORT                       — Listen port (default 5002)
+#   MTLS__CERTPATH                   — Path to mounted mTLS certificate (PEM)
+#   MTLS__KEYPATH                    — Path to mounted mTLS private key (PEM)
+
+EXPOSE 5002
+
+ENTRYPOINT ["/app/VibeStock.Bridge.Cell"]

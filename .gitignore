@@ -1,0 +1,53 @@
+# VibeStock root .gitignore
+
+# --- Secrets / Environment ---
+deploy/.env
+deploy/certs/
+
+# --- Build outputs ---
+bin/
+obj/
+publish/
+
+# --- NuGet ---
+*.nupkg
+*.snupkg
+**/packages/
+
+# --- IDE ---
+.vs/
+.vscode/
+*.user
+*.suo
+
+# --- Logs ---
+*.log
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Credentials / Certificates ---
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+
+# --- Temporary / staging ---
+.staging/
+
+# --- Build logs / generated reports ---
+build_output.txt
+
+# --- Workbench generated output ---
+output/
+
+# --- Temporary engineering scratch ---
+scratch/
+
+# --- Build and diagnostic logs ---
+*.log
+
+# --- Git diagnostic files ---
+git-*.txt

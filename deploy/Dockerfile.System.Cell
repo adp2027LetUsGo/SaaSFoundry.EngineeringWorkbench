@@ -1,0 +1,31 @@
+# VibeStock System.Cell — NativeAOT container image
+# Hosts: Orchestration, AI Mapping, Product Intelligence, Background Jobs, Idempotency
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0 AS runtime
+
+WORKDIR /app
+
+# Copy the NativeAOT self-contained binary produced by:
+#   dotnet publish src/VibeStock.System.Cell -c Release /p:PublishAot=true -r linux-x64
+COPY --chown=app:app publish/VibeStock.System.Cell /app/VibeStock.System.Cell
+
+RUN chmod +x /app/VibeStock.System.Cell
+
+# Run as a non-root user
+RUN groupadd -r app && useradd -r -g app app
+USER app
+
+# Required environment variables (no defaults — must be supplied externally):
+#   DATABASE__CONNECTIONSTRING   — PostgreSQL connection string (secret)
+#   AI__PROVIDER__APIKEY         — AI provider API key (secret)
+#   AI__PROVIDER__ENDPOINT       — AI provider endpoint URL
+#   AI__PROVIDER__MODEL          — AI model name (e.g. gemini-2.0-flash)
+#   OTLP__ENDPOINT               — OpenTelemetry OTLP gRPC endpoint
+#   GRPC__HOST                   — Listen host for gRPC transport
+#   GRPC__PORT                   — Listen port (default 5001)
+#   MTLS__CERTPATH               — Path to mounted mTLS certificate (PEM)
+#   MTLS__KEYPATH                — Path to mounted mTLS private key (PEM)
+
+EXPOSE 5001
+
+ENTRYPOINT ["/app/VibeStock.System.Cell"]

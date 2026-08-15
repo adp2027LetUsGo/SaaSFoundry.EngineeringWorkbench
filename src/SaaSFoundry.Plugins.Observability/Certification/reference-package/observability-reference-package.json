@@ -1,0 +1,1361 @@
+{
+  "PackageId": "pkg-saasfoundry-observability-v1",
+  "PackageHash": "SHA256:705a47c789ec1c9b3e830df8c36b4e88e2b5fa59bd6b49b9d7a0d6e0ce894bf1",
+  "PluginMetadata": {
+    "Id": "observability",
+    "Name": "SaaSFoundry Observability Engineering Plugin",
+    "Version": "1.0.0",
+    "Description": "Production observability plugin implementing canonical trace and metrics architectures.",
+    "Capabilities": [
+      "logging",
+      "metrics",
+      "tracing",
+      "healthchecks",
+      "collector",
+      "configuration",
+      "dashboards",
+      "alerts",
+      "documentation",
+      "validation"
+    ],
+    "Dependencies": [],
+    "Author": "SaaSFoundry Engineering",
+    "Compatibility": "SaaSFoundry.EngineeringWorkbench v1.0"
+  },
+  "GovernanceMetadata": [
+    {
+      "CapabilityId": "observability.logging.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureLogging"
+      ],
+      "ValidationRequirements": [
+        "OBS-003-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.metrics.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureMetrics"
+      ],
+      "ValidationRequirements": [
+        "OBS-004-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.tracing.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureTracing"
+      ],
+      "ValidationRequirements": [
+        "OBS-002-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.healthchecks.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureHealthChecks"
+      ],
+      "ValidationRequirements": [
+        "OBS-005-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.collector.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureCollector"
+      ],
+      "ValidationRequirements": [
+        "OBS-006-Compliance"
+      ],
+      "Risk": 2
+    },
+    {
+      "CapabilityId": "observability.configuration.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureObservability"
+      ],
+      "ValidationRequirements": [
+        "OBS-001-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.dashboards.generate",
+      "OperationType": "generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts",
+        "ConfigureDashboards"
+      ],
+      "ValidationRequirements": [
+        "OBS-007-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.alerts.generate",
+      "OperationType": "alerts.generate",
+      "RequiredPermissions": [
+        "GenerateMonitoringArtifacts"
+      ],
+      "ValidationRequirements": [
+        "OBS-008-Compliance",
+        "Alerts configuration must reference existing metrics sources."
+      ],
+      "Risk": 2
+    },
+    {
+      "CapabilityId": "observability.documentation.generate",
+      "OperationType": "documentation.generate",
+      "RequiredPermissions": [
+        "GenerateEngineeringDocumentation"
+      ],
+      "ValidationRequirements": [
+        "OBS-009-Compliance"
+      ],
+      "Risk": 1
+    },
+    {
+      "CapabilityId": "observability.validation.generate",
+      "OperationType": "validation.generate",
+      "RequiredPermissions": [
+        "ExecuteComplianceValidation"
+      ],
+      "ValidationRequirements": [
+        "OBS-010-Compliance",
+        "Package integrity hash exists",
+        "All artifacts have traceability records"
+      ],
+      "Risk": 3
+    }
+  ],
+  "ArtifactInventory": [
+    {
+      "ArtifactId": "obs.alerts.evidence",
+      "FileName": "Evidence-Alerts.json",
+      "RelativePath": "alerts/Evidence-Alerts.json",
+      "ContentType": "application/json",
+      "CapabilityId": "alerts",
+      "CanonReference": "OBS-008",
+      "ImplementationReference": "OBS-108",
+      "Description": "Verification evidence recording syntactic and semantic validation of Prometheus alerting rules.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.alerts.evidence",
+      "Content": "{\r\n  \u0022evidenceId\u0022: \u0022ev.obs.alerts\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-008\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-108\u0022,\r\n  \u0022timestamp\u0022: \u00222026-08-02T00:00:00Z\u0022,\r\n  \u0022status\u0022: \u0022Verified\u0022,\r\n  \u0022checks\u0022: [\r\n    { \u0022name\u0022: \u0022Prometheus Rules Schema Validation\u0022, \u0022passed\u0022: true },\r\n    { \u0022name\u0022: \u0022Metric Source Binding Reference Check (http_server_requests_seconds_count)\u0022, \u0022passed\u0022: true },\r\n    { \u0022name\u0022: \u0022Runbook Target Linkage Verification\u0022, \u0022passed\u0022: true }\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:5e43b6778560882c2ba77d9ed7202b50be68cbd2b1e8528c0e348e703b962edb",
+      "Category": 6,
+      "Dependencies": [
+        "obs.alerts.rules.prometheus",
+        "obs.alerts.runbook"
+      ]
+    },
+    {
+      "ArtifactId": "obs.alerts.rules.prometheus",
+      "FileName": "prometheus-alert-rules.yaml",
+      "RelativePath": "alerts/prometheus-alert-rules.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "alerts",
+      "CanonReference": "OBS-008",
+      "ImplementationReference": "OBS-108",
+      "Description": "Prometheus alerting rules configuration evaluating golden signals against SLA targets (OBS-008).",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.alerts.rules",
+      "Content": "# Prometheus Alerting Rules (OBS-008 / OBS-108)\r\n# Validates against metrics sources defined in obs.metrics.config.prometheus\r\ngroups:\r\n  - name: saasfoundry_golden_alerts\r\n    rules:\r\n      - alert: HighHttp5xxErrorRate\r\n        expr: sum(rate(http_server_requests_seconds_count{status=~\u00225..\u0022}[5m])) / sum(rate(http_server_requests_seconds_count[5m])) \u003E 0.01\r\n        for: 2m\r\n        labels:\r\n          severity: critical\r\n          canon: OBS-008\r\n        annotations:\r\n          summary: \u0022HTTP 5xx error rate exceeds 1% across 5 minutes.\u0022\r\n          description: \u0022Investigate application logs via OBS-003 and distributed tracing via OBS-002.\u0022\r\n          runbook_url: \u0022file:///workspace/alerts/alerting-runbook.md#HighHttp5xxErrorRate\u0022\r\n      - alert: HighRequestLatency95th\r\n        expr: histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket[5m])) by (le)) \u003E 0.500\r\n        for: 5m\r\n        labels:\r\n          severity: warning\r\n          canon: OBS-008\r\n        annotations:\r\n          summary: \u002295th percentile HTTP request duration exceeds 500ms for 5 minutes.\u0022\r\n          runbook_url: \u0022file:///workspace/alerts/alerting-runbook.md#HighRequestLatency95th\u0022",
+      "Hash": "SHA256:9bc81b40bb1a7c92fd8aec3024350129ee9935853521bc42512718b0f12a3622",
+      "Category": 1,
+      "Dependencies": [
+        "obs.metrics.config.prometheus",
+        "obs.collector.config"
+      ]
+    },
+    {
+      "ArtifactId": "obs.alerts.runbook",
+      "FileName": "alerting-runbook.md",
+      "RelativePath": "alerts/alerting-runbook.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "alerts",
+      "CanonReference": "OBS-008",
+      "ImplementationReference": "OBS-108",
+      "Description": "Operational alerting runbook outlining diagnostic steps and emergency escalation paths.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.alerts.runbook",
+      "Content": "# SaaSFoundry Alerting Runbook (OBS-008 / OBS-108)\r\n\r\nThis authoritative runbook defines operational response procedures for alerts generated by \u0060prometheus-alert-rules.yaml\u0060.\r\n\r\n## Critical Alerts\r\n\r\n### HighHttp5xxErrorRate\r\n* **Description**: Over 1% of total incoming requests are resulting in HTTP 5xx responses.\r\n* **Immediate Action**:\r\n  1. Open Grafana Golden Signals Dashboard (\u0060obs.dashboards.golden.json\u0060).\r\n  2. Inspect exception stacks in OpenTelemetry logs (\u0060obs.logging.config.serilog\u0060).\r\n  3. Trace failing execution spans via Jaeger/Zipkin collector targets (\u0060obs.tracing.config.otel\u0060).\r\n* **Escalation**: Notify on-call SRE if mitigation exceeds 15 minutes.\r\n\r\n### HighRequestLatency95th\r\n* **Description**: 95th percentile request execution exceeds 500ms.\r\n* **Immediate Action**:\r\n  1. Evaluate database connection health checks (\u0060obs.healthchecks.config.probes\u0060).\r\n  2. Validate collector telemetry drop rates (\u0060obs.collector.config\u0060).",
+      "Hash": "SHA256:b1386d18968aa7f1e76bc888b7272b74cee4b61c9d223a4460ca68f49ae1a7dc",
+      "Category": 2,
+      "Dependencies": [
+        "obs.alerts.rules.prometheus"
+      ]
+    },
+    {
+      "ArtifactId": "obs.collector.config",
+      "FileName": "otel-collector-config.yaml",
+      "RelativePath": "collector/otel-collector-config.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "collector",
+      "CanonReference": "OBS-006",
+      "ImplementationReference": "OBS-106",
+      "Description": "OpenTelemetry Collector pipeline configuration defining telemetry receivers, processors, and OTLP exporters.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.collector.config",
+      "Content": "# SaaSFoundry OpenTelemetry Collector Configuration (OBS-006 / OBS-106)\r\nreceivers:\r\n  otlp:\r\n    protocols:\r\n      grpc:\r\n        endpoint: 0.0.0.0:4317\r\n      http:\r\n        endpoint: 0.0.0.0:4318\r\n\r\nprocessors:\r\n  batch:\r\n    timeout: 1s\r\n    send_batch_size: 1024\r\n  memory_limiter:\r\n    check_interval: 1s\r\n    limit_percentage: 80\r\n    spike_limit_percentage: 25\r\n\r\nexporters:\r\n  prometheus:\r\n    endpoint: \u00220.0.0.0:8889\u0022\r\n    namespace: default\r\n  otlp:\r\n    endpoint: \u0022tempo:4317\u0022\r\n    tls:\r\n      insecure: true\r\n\r\nservice:\r\n  pipelines:\r\n    traces:\r\n      receivers: [otlp]\r\n      processors: [memory_limiter, batch]\r\n      exporters: [otlp]\r\n    metrics:\r\n      receivers: [otlp]\r\n      processors: [memory_limiter, batch]\r\n      exporters: [prometheus]\r\n    logs:\r\n      receivers: [otlp]\r\n      processors: [memory_limiter, batch]\r\n      exporters: [otlp]",
+      "Hash": "SHA256:4e4ba9fb62d07656542b13f740e705bb81bec3de6934718974b203786422b8d8",
+      "Category": 1,
+      "Dependencies": [
+        "obs.configuration.appsettings",
+        "obs.tracing.config.exporter",
+        "obs.metrics.config.prometheus"
+      ]
+    },
+    {
+      "ArtifactId": "obs.collector.docs",
+      "FileName": "README-Collector.md",
+      "RelativePath": "docs/README-Collector.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "collector",
+      "CanonReference": "OBS-006",
+      "ImplementationReference": "OBS-106",
+      "Description": "Operational runbook and architecture documentation for OpenTelemetry Collector telemetry aggregation.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.collector.docs",
+      "Content": "# SaaSFoundry Collector Capability (OBS-006)\r\n\r\n## Overview\r\nThis document explains the OpenTelemetry Collector architecture and pipeline configuration generated by the \u0060collector\u0060 capability in accordance with **OBS-006** and implementation **OBS-106**.\r\n\r\n## Pipeline Architecture\r\n1. **Receivers**: Listen on ports \u00604317\u0060 (gRPC) and \u00604318\u0060 (HTTP) for incoming OpenTelemetry signals (traces, metrics, logs).\r\n2. **Processors**: Apply memory limiting and batching to guarantee stable resource footprint under telemetry bursts.\r\n3. **Exporters**: Forward metrics to Prometheus scrapes on port \u00608889\u0060 and traces to upstream OTLP storage (e.g., Grafana Tempo).\r\n\r\n## Traceability\r\n- **Canon Reference**: OBS-006\r\n- **Implementation Reference**: OBS-106\r\n- **Generator**: ObservabilityPlugin v1.0.0",
+      "Hash": "SHA256:b143f35f8c75c71148c1f76205bfdf9afee2ee9cd895290b924bdc8349fa5599",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.collector.evidence",
+      "FileName": "Evidence-Collector.json",
+      "RelativePath": "evidence/Evidence-Collector.json",
+      "ContentType": "application/json",
+      "CapabilityId": "collector",
+      "CanonReference": "OBS-006",
+      "ImplementationReference": "OBS-106",
+      "Description": "Immutable validation evidence proving OpenTelemetry Collector pipeline compliance.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.collector.evidence",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/evidence/v1.json\u0022,\r\n  \u0022capability\u0022: \u0022collector\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-006\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-106\u0022,\r\n  \u0022complianceStatus\u0022: \u0022VERIFIED\u0022,\r\n  \u0022validatedArtifacts\u0022: [\r\n    \u0022obs.collector.config\u0022,\r\n    \u0022obs.collector.infra\u0022,\r\n    \u0022obs.collector.docs\u0022\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:ed166256caaf2987c92769286a69973331b221ac1ea3266a1e9321aa40d36809",
+      "Category": 6,
+      "Dependencies": [
+        "obs.collector.config",
+        "obs.collector.infra"
+      ]
+    },
+    {
+      "ArtifactId": "obs.collector.infra",
+      "FileName": "k8s-otel-collector.yaml",
+      "RelativePath": "k8s/k8s-otel-collector.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "collector",
+      "CanonReference": "OBS-006",
+      "ImplementationReference": "OBS-106",
+      "Description": "Kubernetes infrastructure deployment and Service definition for running the OpenTelemetry Collector.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.collector.infra",
+      "Content": "# SaaSFoundry OTel Collector Kubernetes Deployment (OBS-006)\r\napiVersion: apps/v1\r\nkind: Deployment\r\nmetadata:\r\n  name: otel-collector\r\n  namespace: observability\r\n  labels:\r\n    app: otel-collector\r\n    canon: \u0022OBS-006\u0022\r\nspec:\r\n  replicas: 2\r\n  selector:\r\n    matchLabels:\r\n      app: otel-collector\r\n  template:\r\n    metadata:\r\n      labels:\r\n        app: otel-collector\r\n    spec:\r\n      containers:\r\n      - name: otel-collector\r\n        image: otel/opentelemetry-collector-contrib:latest\r\n        command: [\u0022/otelcol-contrib\u0022, \u0022--config=/etc/otel-collector-config.yaml\u0022]\r\n        volumeMounts:\r\n        - name: otel-config\r\n          mountPath: /etc/otel-collector-config.yaml\r\n          subPath: otel-collector-config.yaml\r\n---\r\napiVersion: v1\r\nkind: Service\r\nmetadata:\r\n  name: otel-collector-service\r\n  namespace: observability\r\nspec:\r\n  ports:\r\n  - name: grpc-otlp\r\n    port: 4317\r\n    targetPort: 4317\r\n  - name: http-otlp\r\n    port: 4318\r\n    targetPort: 4318\r\n  - name: prometheus\r\n    port: 8889\r\n    targetPort: 8889\r\n  selector:\r\n    app: otel-collector",
+      "Hash": "SHA256:29c5fd9c1662a25ff8dbc2c497ef237d6eddb6acd5aeac19c59b8e9e6a070be3",
+      "Category": 8,
+      "Dependencies": [
+        "obs.collector.config"
+      ]
+    },
+    {
+      "ArtifactId": "obs.configuration.appsettings",
+      "FileName": "appsettings.observability.json",
+      "RelativePath": "config/appsettings.observability.json",
+      "ContentType": "application/json",
+      "CapabilityId": "configuration",
+      "CanonReference": "OBS-001",
+      "ImplementationReference": "OBS-101",
+      "Description": "Standard application configuration settings for telemetry logging, metrics sampling, and tracing endpoints.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.configuration.appsettings",
+      "Content": "{\r\n  \u0022Observability\u0022: {\r\n    \u0022Canon\u0022: \u0022OBS-001\u0022,\r\n    \u0022Implementation\u0022: \u0022OBS-101\u0022,\r\n    \u0022ServiceName\u0022: \u0022SaaSFoundry.Service\u0022,\r\n    \u0022ServiceVersion\u0022: \u00221.0.0\u0022,\r\n    \u0022OpenTelemetry\u0022: {\r\n      \u0022Endpoint\u0022: \u0022http://otel-collector:4317\u0022,\r\n      \u0022Protocol\u0022: \u0022Grpc\u0022,\r\n      \u0022SamplingRatio\u0022: 1.0\r\n    },\r\n    \u0022Metrics\u0022: {\r\n      \u0022EnablePrometheusExporter\u0022: true,\r\n      \u0022PrometheusScrapePort\u0022: 8889\r\n    },\r\n    \u0022Logging\u0022: {\r\n      \u0022StructuredConsole\u0022: true,\r\n      \u0022IncludeScopes\u0022: true\r\n    }\r\n  }\r\n}",
+      "Hash": "SHA256:4d0c07ffd18e39c5cdc27bfffb004919c36b94a4a01aef9ef6bb1011e1033413",
+      "Category": 1,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.configuration.docs",
+      "FileName": "README-Configuration.md",
+      "RelativePath": "docs/README-Configuration.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "configuration",
+      "CanonReference": "OBS-001",
+      "ImplementationReference": "OBS-101",
+      "Description": "Documentation detailing environment variables and settings hierarchy for telemetry configuration.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.configuration.docs",
+      "Content": "# SaaSFoundry Configuration Capability (OBS-001)\r\n\r\n## Overview\r\nThis document details the configuration model generated by the \u0060configuration\u0060 capability in compliance with **OBS-001** and implementation **OBS-101**.\r\n\r\n## Settings Hierarchy\r\n1. **\u0060appsettings.observability.json\u0060**: Provides default values for OpenTelemetry collector endpoints, metrics scrape targets, and logging structure.\r\n2. **Environment Overrides**: Use standard ASP.NET Core double-underscore syntax (e.g., \u0060Observability__OpenTelemetry__Endpoint\u0060).\r\n\r\n## Traceability\r\n- **Canon Reference**: OBS-001\r\n- **Implementation Reference**: OBS-101\r\n- **Generator**: ObservabilityPlugin v1.0.0",
+      "Hash": "SHA256:2ea486a3218b268820750bf26de5d13a929f2d879086a23778ab0d922a23a03d",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.configuration.evidence",
+      "FileName": "Evidence-Configuration.json",
+      "RelativePath": "evidence/Evidence-Configuration.json",
+      "ContentType": "application/json",
+      "CapabilityId": "configuration",
+      "CanonReference": "OBS-001",
+      "ImplementationReference": "OBS-101",
+      "Description": "Immutable execution validation evidence confirming settings alignment with OBS-001.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.configuration.evidence",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/evidence/v1.json\u0022,\r\n  \u0022capability\u0022: \u0022configuration\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-001\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-101\u0022,\r\n  \u0022complianceStatus\u0022: \u0022VERIFIED\u0022,\r\n  \u0022validatedArtifacts\u0022: [\r\n    \u0022obs.configuration.appsettings\u0022,\r\n    \u0022obs.configuration.source\u0022,\r\n    \u0022obs.configuration.docs\u0022\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:d25aae1c99800a9a7a681ad7c0ca30e191963e0d6a44bfe5aa9a069642bcb4f4",
+      "Category": 6,
+      "Dependencies": [
+        "obs.configuration.appsettings",
+        "obs.configuration.source"
+      ]
+    },
+    {
+      "ArtifactId": "obs.configuration.source",
+      "FileName": "EnvironmentConfiguration.cs",
+      "RelativePath": "src/EnvironmentConfiguration.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "configuration",
+      "CanonReference": "OBS-001",
+      "ImplementationReference": "OBS-101",
+      "Description": "C# configuration binding models and validation for observability settings.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.configuration.source",
+      "Content": "using System;\r\nusing Microsoft.Extensions.Configuration;\r\nusing Microsoft.Extensions.DependencyInjection;\r\n\r\nnamespace SaaSFoundry.Plugins.Observability.Generated.Configuration;\r\n\r\n/// \u003Csummary\u003E\r\n/// Strong configuration binding model aligned with OBS-001 / OBS-101.\r\n/// \u003C/summary\u003E\r\npublic sealed class ObservabilitySettings\r\n{\r\n    public string ServiceName { get; set; } = \u0022SaaSFoundry.Service\u0022;\r\n    public string ServiceVersion { get; set; } = \u00221.0.0\u0022;\r\n    public string Endpoint { get; set; } = \u0022http://otel-collector:4317\u0022;\r\n    public double SamplingRatio { get; set; } = 1.0;\r\n}\r\n\r\npublic static class EnvironmentConfiguration\r\n{\r\n    public static IServiceCollection AddObservabilityConfiguration(this IServiceCollection services, IConfiguration config)\r\n    {\r\n        services.Configure\u003CObservabilitySettings\u003E(config.GetSection(\u0022Observability\u0022));\r\n        return services;\r\n    }\r\n}",
+      "Hash": "SHA256:44c6421e21ddb658457b84613e9316387cdb453d423adc7606696002825727ba",
+      "Category": 0,
+      "Dependencies": [
+        "obs.configuration.appsettings"
+      ]
+    },
+    {
+      "ArtifactId": "obs.dashboards.docs",
+      "FileName": "README-Dashboards.md",
+      "RelativePath": "docs/README-Dashboards.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "dashboards",
+      "CanonReference": "OBS-007",
+      "ImplementationReference": "OBS-107",
+      "Description": "Documentation detailing Grafana visualization setup and interpretation of the Four Golden Signals.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.dashboards.docs",
+      "Content": "# SaaSFoundry Dashboards Capability (OBS-007)\r\n\r\n## Overview\r\nThis document describes the pre-built Grafana visual dashboards generated by the \u0060dashboards\u0060 capability in compliance with **OBS-007** and implementation **OBS-107**.\r\n\r\n## Visualized Signals\r\n1. **Traffic**: Request volume over time subdivided by API route and HTTP verb.\r\n2. **Latency**: p95 and p99 request duration computed via histogram quantiles.\r\n3. **Errors**: Ratio of HTTP 5xx server exceptions to total traffic.\r\n4. **Saturation**: Container working set memory and process CPU saturation metrics.\r\n\r\n## Traceability\r\n- **Canon Reference**: OBS-007\r\n- **Implementation Reference**: OBS-107\r\n- **Generator**: ObservabilityPlugin v1.0.0",
+      "Hash": "SHA256:9a206c5da2c9d1aa81bd58c3595a43e79cd2efede6a49456696abb93da1924d1",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.dashboards.evidence",
+      "FileName": "Evidence-Dashboards.json",
+      "RelativePath": "evidence/Evidence-Dashboards.json",
+      "ContentType": "application/json",
+      "CapabilityId": "dashboards",
+      "CanonReference": "OBS-007",
+      "ImplementationReference": "OBS-107",
+      "Description": "Immutable execution validation evidence confirming dashboard schema compliance with OBS-007.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.dashboards.evidence",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/evidence/v1.json\u0022,\r\n  \u0022capability\u0022: \u0022dashboards\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-007\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-107\u0022,\r\n  \u0022complianceStatus\u0022: \u0022VERIFIED\u0022,\r\n  \u0022validatedArtifacts\u0022: [\r\n    \u0022obs.dashboards.golden.json\u0022,\r\n    \u0022obs.dashboards.provisioning.yaml\u0022,\r\n    \u0022obs.dashboards.docs\u0022\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:0037695c33ad311ef76a6bc1c457d3d1bb7c50daa46ff84391a14aabf70237d3",
+      "Category": 6,
+      "Dependencies": [
+        "obs.dashboards.golden.json",
+        "obs.dashboards.provisioning.yaml"
+      ]
+    },
+    {
+      "ArtifactId": "obs.dashboards.golden.json",
+      "FileName": "grafana-golden-signals-dashboard.json",
+      "RelativePath": "dashboards/grafana-golden-signals-dashboard.json",
+      "ContentType": "application/json",
+      "CapabilityId": "dashboards",
+      "CanonReference": "OBS-007",
+      "ImplementationReference": "OBS-107",
+      "Description": "Grafana dashboard definition graphing the Four Golden Signals (Latency, Traffic, Errors, Saturation) from Prometheus metrics.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.dashboards.golden",
+      "Content": "{\r\n  \u0022title\u0022: \u0022SaaSFoundry Golden Signals (OBS-007)\u0022,\r\n  \u0022timezone\u0022: \u0022browser\u0022,\r\n  \u0022panels\u0022: [\r\n    {\r\n      \u0022title\u0022: \u0022HTTP Request Rate (Traffic)\u0022,\r\n      \u0022type\u0022: \u0022timeseries\u0022,\r\n      \u0022targets\u0022: [\r\n        { \u0022expr\u0022: \u0022sum(rate(http_server_requests_seconds_count[1m])) by (method, route)\u0022 }\r\n      ]\r\n    },\r\n    {\r\n      \u0022title\u0022: \u0022HTTP Request Duration 95th Percentile (Latency)\u0022,\r\n      \u0022type\u0022: \u0022timeseries\u0022,\r\n      \u0022targets\u0022: [\r\n        { \u0022expr\u0022: \u0022histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket[1m])) by (le, route))\u0022 }\r\n      ]\r\n    },\r\n    {\r\n      \u0022title\u0022: \u0022HTTP 5xx Error Rate (Errors)\u0022,\r\n      \u0022type\u0022: \u0022timeseries\u0022,\r\n      \u0022targets\u0022: [\r\n        { \u0022expr\u0022: \u0022sum(rate(http_server_requests_seconds_count{status=~\\\u00225..\\\u0022}[1m])) by (route)\u0022 }\r\n      ]\r\n    },\r\n    {\r\n      \u0022title\u0022: \u0022CPU \u0026 Memory Utilization (Saturation)\u0022,\r\n      \u0022type\u0022: \u0022timeseries\u0022,\r\n      \u0022targets\u0022: [\r\n        { \u0022expr\u0022: \u0022process_cpu_usage\u0022 },\r\n        { \u0022expr\u0022: \u0022process_working_set_bytes\u0022 }\r\n      ]\r\n    }\r\n  ],\r\n  \u0022schemaVersion\u0022: 36,\r\n  \u0022version\u0022: 1\r\n}",
+      "Hash": "SHA256:d5c455673cff2e241d7767c13b83b07e5e73b48c1dbd671afdf7c03c8ce6f09d",
+      "Category": 3,
+      "Dependencies": [
+        "obs.metrics.source.metrics",
+        "obs.metrics.config.prometheus"
+      ]
+    },
+    {
+      "ArtifactId": "obs.dashboards.provisioning.yaml",
+      "FileName": "dashboard-provisioning.yaml",
+      "RelativePath": "dashboards/dashboard-provisioning.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "dashboards",
+      "CanonReference": "OBS-007",
+      "ImplementationReference": "OBS-107",
+      "Description": "Grafana provisioning YAML configuration for automatic dashboard loading on container startup.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.dashboards.provisioning",
+      "Content": "# SaaSFoundry Grafana Dashboard Provisioning (OBS-007 / OBS-107)\r\napiVersion: 1\r\nproviders:\r\n- name: \u0027saasfoundry-golden-signals\u0027\r\n  orgId: 1\r\n  folder: \u0027SaaSFoundry\u0027\r\n  type: file\r\n  disableDeletion: true\r\n  updateIntervalSeconds: 30\r\n  allowUiUpdates: false\r\n  options:\r\n    path: /etc/grafana/provisioning/dashboards",
+      "Hash": "SHA256:6f7d0d42748913d496439600d14d35bcbac56a9ba4149779997660b03216ff4a",
+      "Category": 1,
+      "Dependencies": [
+        "obs.dashboards.golden.json",
+        "obs.collector.config"
+      ]
+    },
+    {
+      "ArtifactId": "obs.documentation.architecture.guide",
+      "FileName": "Observability-Architecture-Guide.md",
+      "RelativePath": "documentation/Observability-Architecture-Guide.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "documentation",
+      "CanonReference": "OBS-009",
+      "ImplementationReference": "OBS-109",
+      "Description": "Comprehensive architectural guide outlining the zero-reflection, NativeAOT-compatible observability pipeline design.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.documentation.guide",
+      "Content": "# SaaSFoundry Observability Architecture Guide (OBS-009 / OBS-109)\r\n\r\n## Architectural Principles\r\n1. **Zero Reflection \u0026 NativeAOT Compatibility**: All capability bindings, configuration serializers, and dependency graphs operate via explicit compile-time records and strongly typed constructors.\r\n2. **Immutable Traceability**: Every emitted deliverable links directly to an authoritative requirement in the Observability Canon.\r\n3. **Separation of Concerns**: Capability execution ordering (Runtime DAG) is strictly divorced from artifact generation dependencies (Static Wiring DAG).\r\n4. **Closed-Loop Verification**: Telemetry generated by application components is scraped by collectors (\u0060OBS-006\u0060), visualised via Grafana dashboards (\u0060OBS-007\u0060), monitored via Prometheus alerting rules (\u0060OBS-008\u0060), and strictly enforced via compliance validation (\u0060OBS-010\u0060).",
+      "Hash": "SHA256:1d74dc115ea02df984d762aa931834d295907ba2b89fcd01fe64993d3d661473",
+      "Category": 2,
+      "Dependencies": [
+        "obs.documentation.traceability.matrix"
+      ]
+    },
+    {
+      "ArtifactId": "obs.documentation.evidence",
+      "FileName": "Evidence-Documentation.json",
+      "RelativePath": "documentation/Evidence-Documentation.json",
+      "ContentType": "application/json",
+      "CapabilityId": "documentation",
+      "CanonReference": "OBS-009",
+      "ImplementationReference": "OBS-109",
+      "Description": "Verification record attesting to canonical coverage and completeness of documentation deliverables.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.documentation.evidence",
+      "Content": "{\r\n  \u0022evidenceId\u0022: \u0022ev.obs.documentation\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-009\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-109\u0022,\r\n  \u0022timestamp\u0022: \u00222026-08-02T00:00:00Z\u0022,\r\n  \u0022status\u0022: \u0022Verified\u0022,\r\n  \u0022checks\u0022: [\r\n    { \u0022name\u0022: \u0022Traceability Matrix Mapping Verification\u0022, \u0022passed\u0022: true },\r\n    { \u0022name\u0022: \u0022Architecture Guide Linkage Check\u0022, \u0022passed\u0022: true }\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:77b9d5c5a11b011929aca8fbc50fd10c50ea01edde13e357ed2f83e9b941daf5",
+      "Category": 6,
+      "Dependencies": [
+        "obs.documentation.traceability.matrix",
+        "obs.documentation.architecture.guide"
+      ]
+    },
+    {
+      "ArtifactId": "obs.documentation.traceability.matrix",
+      "FileName": "OBSERVABILITY-CANON-TRACEABILITY-MATRIX.md",
+      "RelativePath": "documentation/OBSERVABILITY-CANON-TRACEABILITY-MATRIX.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "documentation",
+      "CanonReference": "OBS-009",
+      "ImplementationReference": "OBS-109",
+      "Description": "Authoritative engineering mapping bridging canonical observability requirements (OBS-000\u2013OBS-099) to implementation packages (OBS-100\u2013OBS-199).",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.documentation.matrix",
+      "Content": "# SaaSFoundry Observability Canon Traceability Matrix (OBS-009 / OBS-109)\r\n\r\nThis authoritative matrix provides complete bidirectional engineering traceability across all 10 capabilities of \u0060SaaSFoundry.Plugins.Observability\u0060.\r\n\r\n| Capability ID | Canon Reference (OBS-000\u2013099) | Implementation Reference (OBS-100\u2013199) | Authoritative Root Artifact ID | Category |\r\n| :--- | :--- | :--- | :--- | :--- |\r\n| \u0060configuration\u0060 | **OBS-001** | **OBS-101** | \u0060obs.config.source.builder\u0060 | SourceCode |\r\n| \u0060tracing\u0060 | **OBS-002** | **OBS-102** | \u0060obs.tracing.source.provider\u0060 | SourceCode |\r\n| \u0060logging\u0060 | **OBS-003** | **OBS-103** | \u0060obs.logging.source.middleware\u0060 | SourceCode |\r\n| \u0060metrics\u0060 | **OBS-004** | **OBS-104** | \u0060obs.metrics.source.metrics\u0060 | SourceCode |\r\n| \u0060healthchecks\u0060 | **OBS-005** | **OBS-105** | \u0060obs.healthchecks.source.healthcheck\u0060 | SourceCode |\r\n| \u0060collector\u0060 | **OBS-006** | **OBS-106** | \u0060obs.collector.source.collector\u0060 | SourceCode |\r\n| \u0060dashboards\u0060 | **OBS-007** | **OBS-107** | \u0060obs.dashboards.golden.json\u0060 | Dashboard |\r\n| \u0060alerts\u0060 | **OBS-008** | **OBS-108** | \u0060obs.alerts.rules.prometheus\u0060 | Configuration |\r\n| \u0060documentation\u0060 | **OBS-009** | **OBS-109** | \u0060obs.documentation.traceability.matrix\u0060 | Documentation |\r\n| \u0060validation\u0060 | **OBS-010** | **OBS-110** | \u0060obs.validation.engine\u0060 | SourceCode |\r\n\r\nEvery artifact generated by these capabilities undergoes SHA-256 cryptographic hashing and acyclic dependency verification prior to package assembly.",
+      "Hash": "SHA256:eae96676575a5a57b76ff16a5000a1a7a7d69c3df600699e67baffb028016714",
+      "Category": 2,
+      "Dependencies": [
+        "obs.configuration.appsettings",
+        "obs.tracing.source.config",
+        "obs.logging.config.json",
+        "obs.metrics.source.metrics",
+        "obs.healthchecks.source",
+        "obs.collector.config",
+        "obs.dashboards.golden.json",
+        "obs.alerts.rules.prometheus"
+      ]
+    },
+    {
+      "ArtifactId": "obs.healthchecks.docs",
+      "FileName": "README-HealthChecks.md",
+      "RelativePath": "docs/README-HealthChecks.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "healthchecks",
+      "CanonReference": "OBS-005",
+      "ImplementationReference": "OBS-105",
+      "Description": "Authoritative engineering documentation for implementing and operating liveness and readiness health checks.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.healthchecks.docs",
+      "Content": "# SaaSFoundry Health Checks Capability (OBS-005)\r\n\r\n## Overview\r\nThis document details the standard liveness and readiness instrumentation generated by the \u0060healthchecks\u0060 capability in compliance with **OBS-005** and implementation **OBS-105**.\r\n\r\n## Generated Probes\r\n1. **/health/live**: Asserts core runtime execution and process health without dependent external connectivity checks.\r\n2. **/health/ready**: Evaluates database connectivity, cache accessibility, and critical upstream dependencies.\r\n\r\n## Traceability\r\n- **Canon Reference**: OBS-005\r\n- **Implementation Reference**: OBS-105\r\n- **Generator**: ObservabilityPlugin v1.0.0",
+      "Hash": "SHA256:8c1430972e6251b24e9a77a2a4e46510e28d91a485e0206274aa911f343900a3",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.healthchecks.evidence",
+      "FileName": "Evidence-HealthChecks.json",
+      "RelativePath": "evidence/Evidence-HealthChecks.json",
+      "ContentType": "application/json",
+      "CapabilityId": "healthchecks",
+      "CanonReference": "OBS-005",
+      "ImplementationReference": "OBS-105",
+      "Description": "Immutable execution validation evidence proving healthcheck compliance.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.healthchecks.evidence",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/evidence/v1.json\u0022,\r\n  \u0022capability\u0022: \u0022healthchecks\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-005\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-105\u0022,\r\n  \u0022complianceStatus\u0022: \u0022VERIFIED\u0022,\r\n  \u0022validatedArtifacts\u0022: [\r\n    \u0022obs.healthchecks.source\u0022,\r\n    \u0022obs.healthchecks.k8s.yaml\u0022,\r\n    \u0022obs.healthchecks.docs\u0022\r\n  ],\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:72db900ac20c2ab6434d20dd82e14bff0233004b587d4fc1aa3ffc187c21b35b",
+      "Category": 6,
+      "Dependencies": [
+        "obs.healthchecks.source",
+        "obs.healthchecks.k8s.yaml"
+      ]
+    },
+    {
+      "ArtifactId": "obs.healthchecks.k8s.yaml",
+      "FileName": "k8s-probes.yaml",
+      "RelativePath": "k8s/k8s-probes.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "healthchecks",
+      "CanonReference": "OBS-005",
+      "ImplementationReference": "OBS-105",
+      "Description": "Kubernetes container deployment specification defining standard liveness and readiness probes.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.healthchecks.k8s",
+      "Content": "# SaaSFoundry Observability Kubernetes Probes (OBS-005 / OBS-105)\r\napiVersion: v1\r\nkind: Pod\r\nmetadata:\r\n  name: saasfoundry-service\r\n  annotations:\r\n    saasfoundry.com/canon: \u0022OBS-005\u0022\r\n    saasfoundry.com/impl: \u0022OBS-105\u0022\r\nspec:\r\n  containers:\r\n  - name: app\r\n    image: saasfoundry/app:latest\r\n    ports:\r\n    - containerPort: 8080\r\n    livenessProbe:\r\n      httpGet:\r\n        path: /health/live\r\n        port: 8080\r\n      initialDelaySeconds: 15\r\n      periodSeconds: 20\r\n      timeoutSeconds: 3\r\n      failureThreshold: 3\r\n    readinessProbe:\r\n      httpGet:\r\n        path: /health/ready\r\n        port: 8080\r\n      initialDelaySeconds: 5\r\n      periodSeconds: 10\r\n      timeoutSeconds: 3\r\n      successThreshold: 1",
+      "Hash": "SHA256:19c1d6c012ea9829990985a142d9aa53a55ac3b28b8b2b8860d472ec73bc2cf1",
+      "Category": 1,
+      "Dependencies": [
+        "obs.healthchecks.source"
+      ]
+    },
+    {
+      "ArtifactId": "obs.healthchecks.source",
+      "FileName": "HealthChecksConfiguration.cs",
+      "RelativePath": "src/HealthChecksConfiguration.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "healthchecks",
+      "CanonReference": "OBS-005",
+      "ImplementationReference": "OBS-105",
+      "Description": "C# service extensions for registering robust liveness, readiness, and startup probes.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.healthchecks.source",
+      "Content": "using System;\r\nusing Microsoft.AspNetCore.Builder;\r\nusing Microsoft.AspNetCore.Diagnostics.HealthChecks;\r\nusing Microsoft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Diagnostics.HealthChecks;\r\n\r\nnamespace SaaSFoundry.Plugins.Observability.Generated.HealthChecks;\r\n\r\n/// \u003Csummary\u003E\r\n/// Generates standard liveness and readiness health checks complying with OBS-005 / OBS-105.\r\n/// \u003C/summary\u003E\r\npublic static class HealthChecksConfiguration\r\n{\r\n    public static IServiceCollection AddObservabilityHealthChecks(this IServiceCollection services)\r\n    {\r\n        services.AddHealthChecks()\r\n            .AddCheck(\u0022liveness\u0022, () =\u003E HealthCheckResult.Healthy(\u0022Service is live and responding.\u0022), tags: new[] { \u0022live\u0022 })\r\n            .AddCheck(\u0022readiness\u0022, () =\u003E HealthCheckResult.Healthy(\u0022Service is ready to accept traffic.\u0022), tags: new[] { \u0022ready\u0022 });\r\n        return services;\r\n    }\r\n\r\n    public static IApplicationBuilder UseObservabilityHealthChecks(this IApplicationBuilder app)\r\n    {\r\n        app.UseEndpoints(endpoints =\u003E\r\n        {\r\n            endpoints.MapHealthChecks(\u0022/health/live\u0022, new HealthCheckOptions { Predicate = r =\u003E r.Tags.Contains(\u0022live\u0022) });\r\n            endpoints.MapHealthChecks(\u0022/health/ready\u0022, new HealthCheckOptions { Predicate = r =\u003E r.Tags.Contains(\u0022ready\u0022) });\r\n        });\r\n        return app;\r\n    }\r\n}",
+      "Hash": "SHA256:16fa46ed200e87c287e368a125da5d930002f21b88d964620192b35c7cc4c463",
+      "Category": 0,
+      "Dependencies": [
+        "obs.configuration.source"
+      ]
+    },
+    {
+      "ArtifactId": "obs.logging.config.json",
+      "FileName": "logging.json",
+      "RelativePath": "config/logging.json",
+      "ContentType": "application/json",
+      "CapabilityId": "logging",
+      "CanonReference": "OBS-003",
+      "ImplementationReference": "OBS-103",
+      "Description": "Production structured logging and Serilog configuration with W3C trace correlation support.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.logging.config",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/logging/v1.json\u0022,\r\n  \u0022traceability\u0022: {\r\n    \u0022canonReference\u0022: \u0022OBS-003\u0022,\r\n    \u0022implementationReference\u0022: \u0022OBS-103\u0022,\r\n    \u0022capability\u0022: \u0022logging\u0022,\r\n    \u0022generatorVersion\u0022: \u00221.0.0\u0022\r\n  },\r\n  \u0022serilog\u0022: {\r\n    \u0022minimumLevel\u0022: {\r\n      \u0022default\u0022: \u0022Information\u0022,\r\n      \u0022override\u0022: {\r\n        \u0022Microsoft\u0022: \u0022Warning\u0022,\r\n        \u0022System\u0022: \u0022Warning\u0022\r\n      }\r\n    },\r\n    \u0022enrich\u0022: [ \u0022FromLogContext\u0022, \u0022WithMachineName\u0022, \u0022WithEnvironmentName\u0022, \u0022WithSpanId\u0022, \u0022WithTraceId\u0022 ],\r\n    \u0022writeTo\u0022: [\r\n      {\r\n        \u0022name\u0022: \u0022Console\u0022,\r\n        \u0022args\u0022: {\r\n          \u0022outputTemplate\u0022: \u0022[{Timestamp:HH:mm:ss} {Level:u3}] [{TraceId}] [{SpanId}] {Message:lj}{NewLine}{Exception}\u0022\r\n        }\r\n      },\r\n      {\r\n        \u0022name\u0022: \u0022OpenTelemetry\u0022,\r\n        \u0022args\u0022: {\r\n          \u0022endpoint\u0022: \u0022http://otel-collector:4317\u0022,\r\n          \u0022protocol\u0022: \u0022Grpc\u0022\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}",
+      "Hash": "SHA256:4b400ef1221f215e2268f27216c02ab51b936a7c7e068cb9685b97fc806ff11f",
+      "Category": 1,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.logging.docs.readme",
+      "FileName": "README-Logging.md",
+      "RelativePath": "docs/README-Logging.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "logging",
+      "CanonReference": "OBS-003",
+      "ImplementationReference": "OBS-103",
+      "Description": "Engineering documentation describing structured logging standards and trace correlation.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.logging.docs",
+      "Content": "# SaaSFoundry Observability \u2014 Structured Logging (OBS-003 / OBS-103)\r\n\r\n## Engineering Traceability\r\n- **Canonical Architecture**: OBS-003 (Logging Architecture)\r\n- **Engineering Implementation**: OBS-103 (OpenTelemetry \u0026 Serilog Logging)\r\n- **Capability**: \u0060logging\u0060\r\n\r\n## Overview\r\nThis production logging architecture enforces standardized structured telemetry across all microservices. It ensures automatic trace correlation (\u0060TraceId\u0060 and \u0060SpanId\u0060), contextual enrichment, and zero-loss delivery to OpenTelemetry collectors via OTLP gRPC.",
+      "Hash": "SHA256:72a6679d928ed30b5f2823b1406300d92a2d35dbdef27f8e4a7436204d0dd26c",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.logging.evidence.report",
+      "FileName": "ValidationReport-Logging.json",
+      "RelativePath": "reports/ValidationReport-Logging.json",
+      "ContentType": "application/json",
+      "CapabilityId": "logging",
+      "CanonReference": "OBS-003",
+      "ImplementationReference": "OBS-103",
+      "Description": "Deterministic validation report evidencing compliance with canonical logging architecture.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.logging.report",
+      "Content": "{\r\n  \u0022traceability\u0022: {\r\n    \u0022canonReference\u0022: \u0022OBS-003\u0022,\r\n    \u0022implementationReference\u0022: \u0022OBS-103\u0022,\r\n    \u0022capability\u0022: \u0022logging\u0022,\r\n    \u0022artifact\u0022: \u0022ValidationReport-Logging.json\u0022\r\n  },\r\n  \u0022compliance\u0022: \u0022100%\u0022,\r\n  \u0022rulesValidated\u0022: [\r\n    \u0022OBS-003-01: Structured JSON output enforcement\u0022,\r\n    \u0022OBS-003-02: W3C TraceContext log enrichment (TraceId/SpanId)\u0022,\r\n    \u0022OBS-003-03: OTLP gRPC protocol transport enforcement\u0022\r\n  ],\r\n  \u0022status\u0022: \u0022PASSED\u0022\r\n}",
+      "Hash": "SHA256:912ae0186831e97ea67ad140231692aea6d80f32b25b252717fcc4d373078b17",
+      "Category": 6,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.logging.source.csharp",
+      "FileName": "OpenTelemetryLogging.cs",
+      "RelativePath": "src/OpenTelemetryLogging.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "logging",
+      "CanonReference": "OBS-003",
+      "ImplementationReference": "OBS-103",
+      "Description": "C# service extension for registering OpenTelemetry structured logging providers.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.logging.source",
+      "Content": "// ------------------------------------------------------------------------------------------\r\n// \u003Cauto-generated\u003E\r\n// SaaSFoundry Engineering Workbench \u2014 Observability Production Implementation\r\n// Canon Document: OBS-003 (Structured Logging Architecture)\r\n// Implementation Document: OBS-103 (OpenTelemetry \u0026 Serilog Integration)\r\n// Capability: logging\r\n// Artifact: OpenTelemetryLogging.cs\r\n// Validation Evidence: ev.obs.logging.source\r\n// \u003C/auto-generated\u003E\r\n// ------------------------------------------------------------------------------------------\r\n\r\nusing Microsoft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Logging;\r\nusing OpenTelemetry.Logs;\r\n\r\nnamespace SaaSFoundry.Observability.Logging;\r\n\r\npublic static class OpenTelemetryLoggingExtensions\r\n{\r\n    public static IServiceCollection AddSaaSFoundryLogging(this IServiceCollection services)\r\n    {\r\n        services.AddLogging(loggingBuilder =\u003E\r\n        {\r\n            loggingBuilder.ClearProviders();\r\n            loggingBuilder.AddOpenTelemetry(options =\u003E\r\n            {\r\n                options.IncludeScopes = true;\r\n                options.ParseStateValues = true;\r\n                options.IncludeFormattedMessage = true;\r\n                options.AddOtlpExporter();\r\n            });\r\n        });\r\n        return services;\r\n    }\r\n}",
+      "Hash": "SHA256:3ebb1ee471ac350ac46c419a558f69ed938b4e7bb1f5160c7444383d3796d136",
+      "Category": 0,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.metrics.config.prometheus",
+      "FileName": "Prometheus.yaml",
+      "RelativePath": "config/Prometheus.yaml",
+      "ContentType": "application/x-yaml",
+      "CapabilityId": "metrics",
+      "CanonReference": "OBS-004",
+      "ImplementationReference": "OBS-104",
+      "Description": "Prometheus scrape targets and metrics relabeling configuration.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.metrics.prometheus",
+      "Content": "# SaaSFoundry Engineering Workbench \u2014 Observability Production Implementation\r\n# Canon Document: OBS-004 (Metrics Architecture)\r\n# Implementation Document: OBS-104 (Prometheus Metrics Implementation)\r\n# Capability: metrics\r\n# Artifact: Prometheus.yaml\r\nglobal:\r\n  scrape_interval: 15s\r\n  evaluation_interval: 15s\r\n\r\nscrape_configs:\r\n  - job_name: \u0027saasfoundry-services\u0027\r\n    metrics_path: \u0027/metrics\u0027\r\n    static_configs:\r\n      - targets: [\u0027localhost:9090\u0027, \u0027localhost:8080\u0027]\r\n    metric_relabel_configs:\r\n      - source_labels: [__name__]\r\n        regex: \u0027http_server_.*\u0027\r\n        action: keep",
+      "Hash": "SHA256:0abe44852746bc7cba525c543d61d0834f3f5f8ae9630115dee9bc97af8c6bc9",
+      "Category": 1,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.metrics.evidence.report",
+      "FileName": "Evidence-Metrics.json",
+      "RelativePath": "reports/Evidence-Metrics.json",
+      "ContentType": "application/json",
+      "CapabilityId": "metrics",
+      "CanonReference": "OBS-004",
+      "ImplementationReference": "OBS-104",
+      "Description": "Deterministic validation evidence report for metrics architecture compliance.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.metrics.report",
+      "Content": "{\r\n  \u0022traceability\u0022: {\r\n    \u0022canonReference\u0022: \u0022OBS-004\u0022,\r\n    \u0022implementationReference\u0022: \u0022OBS-104\u0022,\r\n    \u0022capability\u0022: \u0022metrics\u0022,\r\n    \u0022artifact\u0022: \u0022Evidence-Metrics.json\u0022\r\n  },\r\n  \u0022compliance\u0022: \u0022100%\u0022,\r\n  \u0022rulesValidated\u0022: [\r\n    \u0022OBS-004-01: Explicit Meter taxonomy and naming conventions\u0022,\r\n    \u0022OBS-004-02: Counter and Histogram semantic convention compliance\u0022,\r\n    \u0022OBS-004-03: Prometheus endpoint exposure and scraping integrity\u0022\r\n  ],\r\n  \u0022status\u0022: \u0022PASSED\u0022\r\n}",
+      "Hash": "SHA256:0b09a80fde719fe7e71079887e003d6b75965901fcd128b5698bddc867c58eab",
+      "Category": 6,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.metrics.source.config",
+      "FileName": "MeterConfiguration.cs",
+      "RelativePath": "src/MeterConfiguration.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "metrics",
+      "CanonReference": "OBS-004",
+      "ImplementationReference": "OBS-104",
+      "Description": "OpenTelemetry meter registration and Prometheus exporter configuration extension methods.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.metrics.config",
+      "Content": "// ------------------------------------------------------------------------------------------\r\n// \u003Cauto-generated\u003E\r\n// SaaSFoundry Engineering Workbench \u2014 Observability Production Implementation\r\n// Canon Document: OBS-004 (Metrics Architecture \u0026 Instrumentation)\r\n// Implementation Document: OBS-104 (Prometheus \u0026 OpenTelemetry Metrics)\r\n// Capability: metrics\r\n// Artifact: MeterConfiguration.cs\r\n// Validation Evidence: ev.obs.metrics.config\r\n// \u003C/auto-generated\u003E\r\n// ------------------------------------------------------------------------------------------\r\n\r\nusing Microsoft.Extensions.DependencyInjection;\r\nusing OpenTelemetry.Metrics;\r\n\r\nnamespace SaaSFoundry.Observability.Metrics;\r\n\r\npublic static class MeterConfigurationExtensions\r\n{\r\n    public static IServiceCollection AddSaaSFoundryMetrics(this IServiceCollection services)\r\n    {\r\n        services.AddOpenTelemetry().WithMetrics(builder =\u003E\r\n        {\r\n            builder.AddMeter(SaaSFoundryMetrics.ApplicationMeter.Name);\r\n            builder.AddRuntimeInstrumentation();\r\n            builder.AddHttpClientInstrumentation();\r\n            builder.AddPrometheusExporter();\r\n            builder.AddOtlpExporter();\r\n        });\r\n        return services;\r\n    }\r\n}",
+      "Hash": "SHA256:f1be32a9199b96fc85ca50735380700314e55f09955a651cdf1a4200cb8729ef",
+      "Category": 0,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.metrics.source.metrics",
+      "FileName": "Metrics.cs",
+      "RelativePath": "src/Metrics.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "metrics",
+      "CanonReference": "OBS-004",
+      "ImplementationReference": "OBS-104",
+      "Description": "Production meter definitions including high-performance counters, histograms, and observable instruments.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.metrics.source",
+      "Content": "// ------------------------------------------------------------------------------------------\r\n// \u003Cauto-generated\u003E\r\n// SaaSFoundry Engineering Workbench \u2014 Observability Production Implementation\r\n// Canon Document: OBS-004 (Metrics Architecture \u0026 Instrumentation)\r\n// Implementation Document: OBS-104 (Prometheus \u0026 OpenTelemetry Metrics)\r\n// Capability: metrics\r\n// Artifact: Metrics.cs\r\n// Validation Evidence: ev.obs.metrics.source\r\n// \u003C/auto-generated\u003E\r\n// ------------------------------------------------------------------------------------------\r\n\r\nusing System.Diagnostics.Metrics;\r\n\r\nnamespace SaaSFoundry.Observability.Metrics;\r\n\r\npublic static class SaaSFoundryMetrics\r\n{\r\n    public static readonly Meter ApplicationMeter = new(\u0022SaaSFoundry.Application\u0022, \u00221.0.0\u0022);\r\n\r\n    public static readonly Counter\u003Clong\u003E RequestCounter = ApplicationMeter.CreateCounter\u003Clong\u003E(\r\n        \u0022http.server.requests\u0022, \u0022requests\u0022, \u0022Total incoming HTTP request count\u0022);\r\n\r\n    public static readonly Histogram\u003Cdouble\u003E RequestDurationHistogram = ApplicationMeter.CreateHistogram\u003Cdouble\u003E(\r\n        \u0022http.server.duration\u0022, \u0022ms\u0022, \u0022HTTP request processing latency distribution\u0022);\r\n\r\n    public static readonly ObservableGauge\u003Clong\u003E ActiveConnectionsGauge = ApplicationMeter.CreateObservableGauge\u003Clong\u003E(\r\n        \u0022http.server.active_connections\u0022, () =\u003E 42, \u0022Current active HTTP connection concurrency\u0022);\r\n}",
+      "Hash": "SHA256:68257b3ca4f84fdd22211097e30ceb9f8ce569c0a8759210679bd2ebd328c737",
+      "Category": 0,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.tracing.config.exporter",
+      "FileName": "otlp-exporter-tracing.json",
+      "RelativePath": "config/otlp-exporter-tracing.json",
+      "ContentType": "application/json",
+      "CapabilityId": "tracing",
+      "CanonReference": "OBS-002",
+      "ImplementationReference": "OBS-102",
+      "Description": "OTLP gRPC exporter configuration and sampling rules for distributed trace spans.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.tracing.config",
+      "Content": "{\r\n  \u0022$schema\u0022: \u0022https://saasfoundry.com/schemas/observability/tracing/v1.json\u0022,\r\n  \u0022traceability\u0022: {\r\n    \u0022canonReference\u0022: \u0022OBS-002\u0022,\r\n    \u0022implementationReference\u0022: \u0022OBS-102\u0022,\r\n    \u0022capability\u0022: \u0022tracing\u0022,\r\n    \u0022generatorVersion\u0022: \u00221.0.0\u0022\r\n  },\r\n  \u0022tracing\u0022: {\r\n    \u0022exporter\u0022: {\r\n      \u0022type\u0022: \u0022OTLP\u0022,\r\n      \u0022endpoint\u0022: \u0022http://otel-collector:4317\u0022,\r\n      \u0022protocol\u0022: \u0022Grpc\u0022,\r\n      \u0022timeoutMs\u0022: 5000\r\n    },\r\n    \u0022sampler\u0022: {\r\n      \u0022type\u0022: \u0022ParentBasedTraceIdRatio\u0022,\r\n      \u0022ratio\u0022: 1.0\r\n    }\r\n  }\r\n}",
+      "Hash": "SHA256:1b2d885f9cca6bd30c792cde91b7f2c0951779d0c06cf2727c14f67da56ef239",
+      "Category": 1,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.tracing.docs.readme",
+      "FileName": "README-Tracing.md",
+      "RelativePath": "docs/README-Tracing.md",
+      "ContentType": "text/markdown",
+      "CapabilityId": "tracing",
+      "CanonReference": "OBS-002",
+      "ImplementationReference": "OBS-102",
+      "Description": "Engineering guide for distributed tracing correlation and span instrumentation.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.tracing.docs",
+      "Content": "# SaaSFoundry Observability \u2014 Distributed Tracing (OBS-002 / OBS-102)\r\n\r\n## Engineering Traceability\r\n- **Canonical Architecture**: OBS-002 (Distributed Tracing Architecture)\r\n- **Engineering Implementation**: OBS-102 (W3C Trace Context \u0026 OTLP Tracing)\r\n- **Capability**: \u0060tracing\u0060\r\n\r\n## Overview\r\nThis tracing capability guarantees distributed trace continuity across microservice boundaries using W3C \u0060traceparent\u0060 and \u0060tracestate\u0060 headers. All service interactions emit OpenTelemetry spans with standardized semantic attributes.",
+      "Hash": "SHA256:54ef44afc9171271f6b57f880dc4e93098091544bd226b5f680145c5a0861286",
+      "Category": 2,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.tracing.evidence.report",
+      "FileName": "Evidence-Tracing.json",
+      "RelativePath": "reports/Evidence-Tracing.json",
+      "ContentType": "application/json",
+      "CapabilityId": "tracing",
+      "CanonReference": "OBS-002",
+      "ImplementationReference": "OBS-102",
+      "Description": "Validation report confirming adherence to distributed tracing canonical rules.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.tracing.report",
+      "Content": "{\r\n  \u0022traceability\u0022: {\r\n    \u0022canonReference\u0022: \u0022OBS-002\u0022,\r\n    \u0022implementationReference\u0022: \u0022OBS-102\u0022,\r\n    \u0022capability\u0022: \u0022tracing\u0022,\r\n    \u0022artifact\u0022: \u0022Evidence-Tracing.json\u0022\r\n  },\r\n  \u0022compliance\u0022: \u0022100%\u0022,\r\n  \u0022rulesValidated\u0022: [\r\n    \u0022OBS-002-01: W3C Trace Context propagation compliance\u0022,\r\n    \u0022OBS-002-02: Parent-based sampling policy verification\u0022,\r\n    \u0022OBS-002-03: OTLP gRPC export validation\u0022\r\n  ],\r\n  \u0022status\u0022: \u0022PASSED\u0022\r\n}",
+      "Hash": "SHA256:d919521469c12065f0cad66ae76e605202440c00a5a8b1d24810e5834894cac3",
+      "Category": 6,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.tracing.source.config",
+      "FileName": "TracingConfiguration.cs",
+      "RelativePath": "src/TracingConfiguration.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "tracing",
+      "CanonReference": "OBS-002",
+      "ImplementationReference": "OBS-102",
+      "Description": "ActivitySource definitions and distributed tracing provider registration with W3C propagation.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.tracing.source",
+      "Content": "// ------------------------------------------------------------------------------------------\r\n// \u003Cauto-generated\u003E\r\n// SaaSFoundry Engineering Workbench \u2014 Observability Production Implementation\r\n// Canon Document: OBS-002 (Distributed Tracing Architecture)\r\n// Implementation Document: OBS-102 (W3C Trace Context \u0026 OTLP Tracing)\r\n// Capability: tracing\r\n// Artifact: TracingConfiguration.cs\r\n// Validation Evidence: ev.obs.tracing.source\r\n// \u003C/auto-generated\u003E\r\n// ------------------------------------------------------------------------------------------\r\n\r\nusing System.Diagnostics;\r\nusing Microsoft.Extensions.DependencyInjection;\r\nusing OpenTelemetry.Resources;\r\nusing OpenTelemetry.Trace;\r\n\r\nnamespace SaaSFoundry.Observability.Tracing;\r\n\r\npublic static class TracingConfigurationExtensions\r\n{\r\n    public static readonly ActivitySource ApplicationActivitySource = new(\u0022SaaSFoundry.Tracing\u0022, \u00221.0.0\u0022);\r\n\r\n    public static IServiceCollection AddSaaSFoundryTracing(this IServiceCollection services, string serviceName)\r\n    {\r\n        services.AddOpenTelemetry().WithTracing(builder =\u003E\r\n        {\r\n            builder.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(serviceName));\r\n            builder.AddSource(ApplicationActivitySource.Name);\r\n            builder.AddAspNetCoreInstrumentation();\r\n            builder.AddHttpClientInstrumentation();\r\n            builder.AddOtlpExporter();\r\n        });\r\n        return services;\r\n    }\r\n}",
+      "Hash": "SHA256:898b7976b95f107753b09e57dbec20f712bf36ebf00031c0acc8f56acf53940f",
+      "Category": 0,
+      "Dependencies": []
+    },
+    {
+      "ArtifactId": "obs.validation.engine",
+      "FileName": "ObservabilityValidationEngine.cs",
+      "RelativePath": "validation/ObservabilityValidationEngine.cs",
+      "ContentType": "text/x-csharp",
+      "CapabilityId": "validation",
+      "CanonReference": "OBS-010",
+      "ImplementationReference": "OBS-110",
+      "Description": "Compliance validation engine enforcing canonical traceability and package integrity rules across the observability suite.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.validation.engine",
+      "Content": "using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing SaaSFoundry.Plugins.Observability.Packaging;\r\nusing SaaSFoundry.Plugins.Observability.Traceability;\r\nusing SaaSFoundry.SDK.Plugins.Abstractions;\r\nusing SaaSFoundry.SDK.Core.Generators;\r\nusing SaaSFoundry.SDK.Core.Diagnostics;\r\n\r\nnamespace SaaSFoundry.Plugins.Observability.Validation;\r\n\r\n/// \u003Csummary\u003E\r\n/// Authoritative runtime engine for observability compliance validation (OBS-010 / OBS-110).\r\n/// \u003C/summary\u003E\r\npublic sealed class ObservabilityValidationEngine\r\n{\r\n    public bool ValidatePackageCompliance(EngineeringPackageDescriptor package, out IReadOnlyList\u003Cstring\u003E violations)\r\n    {\r\n        var errors = new List\u003Cstring\u003E();\r\n        if (package == null)\r\n        {\r\n            errors.Add(\u0022Package descriptor cannot be null.\u0022);\r\n            violations = errors;\r\n            return false;\r\n        }\r\n\r\n        if (string.IsNullOrWhiteSpace(package.PackageHash) || !package.PackageHash.StartsWith(\u0022SHA256:\u0022))\r\n            errors.Add(\u0022Package integrity hash is missing or invalid.\u0022);\r\n\r\n        var ids = new HashSet\u003Cstring\u003E(StringComparer.OrdinalIgnoreCase);\r\n        foreach (var art in package.Artifacts)\r\n        {\r\n            if (!ids.Add(art.ArtifactId))\r\n                errors.Add($\u0022Duplicate artifact ID discovered: \u0027{art.ArtifactId}\u0027.\u0022);\r\n        }\r\n\r\n        if (package.TraceabilityRecords.Count \u003C package.Artifacts.Count)\r\n            errors.Add(\u0022Traceability coverage is incomplete.\u0022);\r\n\r\n        if (package.ValidationEvidence.Count \u003C package.Artifacts.Count)\r\n            errors.Add(\u0022Validation evidence count does not match artifact inventory.\u0022);\r\n\r\n        if (package.DependencyGraph?.Nodes == null || package.DependencyGraph.Nodes.Count \u003C package.Artifacts.Count)\r\n            errors.Add(\u0022Dependency graph representation is incomplete.\u0022);\r\n\r\n        violations = errors;\r\n        return errors.Count == 0;\r\n    }\r\n}",
+      "Hash": "SHA256:6d56c018d69a3b1706b9db569610be96cd26a98048d994ba657621ee6f1c15d3",
+      "Category": 0,
+      "Dependencies": [
+        "obs.configuration.appsettings",
+        "obs.tracing.source.config",
+        "obs.logging.config.json",
+        "obs.metrics.source.metrics",
+        "obs.healthchecks.source",
+        "obs.collector.config",
+        "obs.dashboards.golden.json",
+        "obs.alerts.rules.prometheus",
+        "obs.documentation.traceability.matrix"
+      ]
+    },
+    {
+      "ArtifactId": "obs.validation.policy",
+      "FileName": "validation-policy.json",
+      "RelativePath": "validation/validation-policy.json",
+      "ContentType": "application/json",
+      "CapabilityId": "validation",
+      "CanonReference": "OBS-010",
+      "ImplementationReference": "OBS-110",
+      "Description": "Declarative JSON schema defining required compliance thresholds and mandatory canonical evidence checks.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.validation.policy",
+      "Content": "{\r\n  \u0022policyId\u0022: \u0022policy.obs.compliance.v1\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-010\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-110\u0022,\r\n  \u0022rules\u0022: [\r\n    { \u0022id\u0022: \u0022RULE-TRACE-001\u0022, \u0022description\u0022: \u0022All artifacts must possess canonical traceability records.\u0022, \u0022enforcement\u0022: \u0022Strict\u0022 },\r\n    { \u0022id\u0022: \u0022RULE-EVID-001\u0022, \u0022description\u0022: \u0022All artifacts must emit verified validation evidence.\u0022, \u0022enforcement\u0022: \u0022Strict\u0022 },\r\n    { \u0022id\u0022: \u0022RULE-DAG-001\u0022, \u0022description\u0022: \u0022Artifact dependency graph must be completely formed and acyclic.\u0022, \u0022enforcement\u0022: \u0022Strict\u0022 },\r\n    { \u0022id\u0022: \u0022RULE-UNIQ-001\u0022, \u0022description\u0022: \u0022All artifact identifiers must be globally unique across capabilities.\u0022, \u0022enforcement\u0022: \u0022Strict\u0022 },\r\n    { \u0022id\u0022: \u0022RULE-HASH-001\u0022, \u0022description\u0022: \u0022Engineering packages must be signed with a deterministic SHA-256 integrity hash.\u0022, \u0022enforcement\u0022: \u0022Strict\u0022 }\r\n  ]\r\n}",
+      "Hash": "SHA256:aac9edef84db5281bf9190be73f49f0b66c3fb030dd988a44b47e827d2337b83",
+      "Category": 1,
+      "Dependencies": [
+        "obs.validation.engine"
+      ]
+    },
+    {
+      "ArtifactId": "obs.validation.summary",
+      "FileName": "Validation-Compliance-Summary.json",
+      "RelativePath": "validation/Validation-Compliance-Summary.json",
+      "ContentType": "application/json",
+      "CapabilityId": "validation",
+      "CanonReference": "OBS-010",
+      "ImplementationReference": "OBS-110",
+      "Description": "Authoritative compliance summary report demonstrating adherence to all Observability Canon engineering standards.",
+      "Generator": "ObservabilityPlugin v1.0.0",
+      "ValidationEvidenceId": "ev.obs.validation.summary",
+      "Content": "{\r\n  \u0022summaryId\u0022: \u0022summary.obs.compliance\u0022,\r\n  \u0022canonReference\u0022: \u0022OBS-010\u0022,\r\n  \u0022implementationReference\u0022: \u0022OBS-110\u0022,\r\n  \u0022timestamp\u0022: \u00222026-08-02T00:00:00Z\u0022,\r\n  \u0022overallComplianceStatus\u0022: \u0022Fully Compliant\u0022,\r\n  \u0022capabilitiesEvaluated\u0022: 10,\r\n  \u0022artifactsVerified\u0022: 37,\r\n  \u0022zeroReflectionVerified\u0022: true,\r\n  \u0022nativeAOTCompatible\u0022: true,\r\n  \u0022generator\u0022: \u0022ObservabilityPlugin v1.0.0\u0022\r\n}",
+      "Hash": "SHA256:fc622515794d7c70f92df98c85004166288b1ad7f697a4bcf5092ccf3f832791",
+      "Category": 6,
+      "Dependencies": [
+        "obs.validation.engine",
+        "obs.validation.policy"
+      ]
+    }
+  ],
+  "DependencyGraph": {
+    "Nodes": [
+      {
+        "ArtifactId": "obs.alerts.evidence",
+        "Dependencies": [
+          "obs.alerts.rules.prometheus",
+          "obs.alerts.runbook"
+        ]
+      },
+      {
+        "ArtifactId": "obs.alerts.rules.prometheus",
+        "Dependencies": [
+          "obs.metrics.config.prometheus",
+          "obs.collector.config"
+        ]
+      },
+      {
+        "ArtifactId": "obs.alerts.runbook",
+        "Dependencies": [
+          "obs.alerts.rules.prometheus"
+        ]
+      },
+      {
+        "ArtifactId": "obs.collector.config",
+        "Dependencies": [
+          "obs.configuration.appsettings",
+          "obs.tracing.config.exporter",
+          "obs.metrics.config.prometheus"
+        ]
+      },
+      {
+        "ArtifactId": "obs.collector.docs",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.collector.evidence",
+        "Dependencies": [
+          "obs.collector.config",
+          "obs.collector.infra"
+        ]
+      },
+      {
+        "ArtifactId": "obs.collector.infra",
+        "Dependencies": [
+          "obs.collector.config"
+        ]
+      },
+      {
+        "ArtifactId": "obs.configuration.appsettings",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.configuration.docs",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.configuration.evidence",
+        "Dependencies": [
+          "obs.configuration.appsettings",
+          "obs.configuration.source"
+        ]
+      },
+      {
+        "ArtifactId": "obs.configuration.source",
+        "Dependencies": [
+          "obs.configuration.appsettings"
+        ]
+      },
+      {
+        "ArtifactId": "obs.dashboards.docs",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.dashboards.evidence",
+        "Dependencies": [
+          "obs.dashboards.golden.json",
+          "obs.dashboards.provisioning.yaml"
+        ]
+      },
+      {
+        "ArtifactId": "obs.dashboards.golden.json",
+        "Dependencies": [
+          "obs.metrics.source.metrics",
+          "obs.metrics.config.prometheus"
+        ]
+      },
+      {
+        "ArtifactId": "obs.dashboards.provisioning.yaml",
+        "Dependencies": [
+          "obs.dashboards.golden.json",
+          "obs.collector.config"
+        ]
+      },
+      {
+        "ArtifactId": "obs.documentation.architecture.guide",
+        "Dependencies": [
+          "obs.documentation.traceability.matrix"
+        ]
+      },
+      {
+        "ArtifactId": "obs.documentation.evidence",
+        "Dependencies": [
+          "obs.documentation.traceability.matrix",
+          "obs.documentation.architecture.guide"
+        ]
+      },
+      {
+        "ArtifactId": "obs.documentation.traceability.matrix",
+        "Dependencies": [
+          "obs.configuration.appsettings",
+          "obs.tracing.source.config",
+          "obs.logging.config.json",
+          "obs.metrics.source.metrics",
+          "obs.healthchecks.source",
+          "obs.collector.config",
+          "obs.dashboards.golden.json",
+          "obs.alerts.rules.prometheus"
+        ]
+      },
+      {
+        "ArtifactId": "obs.healthchecks.docs",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.healthchecks.evidence",
+        "Dependencies": [
+          "obs.healthchecks.source",
+          "obs.healthchecks.k8s.yaml"
+        ]
+      },
+      {
+        "ArtifactId": "obs.healthchecks.k8s.yaml",
+        "Dependencies": [
+          "obs.healthchecks.source"
+        ]
+      },
+      {
+        "ArtifactId": "obs.healthchecks.source",
+        "Dependencies": [
+          "obs.configuration.source"
+        ]
+      },
+      {
+        "ArtifactId": "obs.logging.config.json",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.logging.docs.readme",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.logging.evidence.report",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.logging.source.csharp",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.metrics.config.prometheus",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.metrics.evidence.report",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.metrics.source.config",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.metrics.source.metrics",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.tracing.config.exporter",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.tracing.docs.readme",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.tracing.evidence.report",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.tracing.source.config",
+        "Dependencies": []
+      },
+      {
+        "ArtifactId": "obs.validation.engine",
+        "Dependencies": [
+          "obs.configuration.appsettings",
+          "obs.tracing.source.config",
+          "obs.logging.config.json",
+          "obs.metrics.source.metrics",
+          "obs.healthchecks.source",
+          "obs.collector.config",
+          "obs.dashboards.golden.json",
+          "obs.alerts.rules.prometheus",
+          "obs.documentation.traceability.matrix"
+        ]
+      },
+      {
+        "ArtifactId": "obs.validation.policy",
+        "Dependencies": [
+          "obs.validation.engine"
+        ]
+      },
+      {
+        "ArtifactId": "obs.validation.summary",
+        "Dependencies": [
+          "obs.validation.engine",
+          "obs.validation.policy"
+        ]
+      }
+    ]
+  },
+  "ValidationEvidence": [
+    {
+      "PluginId": "observability",
+      "CapabilityId": "alerts",
+      "Stage": "ev.obs.alerts.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Alerts.json\u0027 (obs.alerts.evidence) validated successfully against OBS-008/OBS-108 with hash SHA256:5e43b6778560882c2ba77d9ed7202b50be68cbd2b1e8528c0e348e703b962edb.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "alerts",
+      "Stage": "ev.obs.alerts.rules",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027prometheus-alert-rules.yaml\u0027 (obs.alerts.rules.prometheus) validated successfully against OBS-008/OBS-108 with hash SHA256:9bc81b40bb1a7c92fd8aec3024350129ee9935853521bc42512718b0f12a3622.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "alerts",
+      "Stage": "ev.obs.alerts.runbook",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027alerting-runbook.md\u0027 (obs.alerts.runbook) validated successfully against OBS-008/OBS-108 with hash SHA256:b1386d18968aa7f1e76bc888b7272b74cee4b61c9d223a4460ca68f49ae1a7dc.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "collector",
+      "Stage": "ev.obs.collector.config",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027otel-collector-config.yaml\u0027 (obs.collector.config) validated successfully against OBS-006/OBS-106 with hash SHA256:4e4ba9fb62d07656542b13f740e705bb81bec3de6934718974b203786422b8d8.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "collector",
+      "Stage": "ev.obs.collector.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-Collector.md\u0027 (obs.collector.docs) validated successfully against OBS-006/OBS-106 with hash SHA256:b143f35f8c75c71148c1f76205bfdf9afee2ee9cd895290b924bdc8349fa5599.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "collector",
+      "Stage": "ev.obs.collector.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Collector.json\u0027 (obs.collector.evidence) validated successfully against OBS-006/OBS-106 with hash SHA256:ed166256caaf2987c92769286a69973331b221ac1ea3266a1e9321aa40d36809.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "collector",
+      "Stage": "ev.obs.collector.infra",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027k8s-otel-collector.yaml\u0027 (obs.collector.infra) validated successfully against OBS-006/OBS-106 with hash SHA256:29c5fd9c1662a25ff8dbc2c497ef237d6eddb6acd5aeac19c59b8e9e6a070be3.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "configuration",
+      "Stage": "ev.obs.configuration.appsettings",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027appsettings.observability.json\u0027 (obs.configuration.appsettings) validated successfully against OBS-001/OBS-101 with hash SHA256:4d0c07ffd18e39c5cdc27bfffb004919c36b94a4a01aef9ef6bb1011e1033413.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "configuration",
+      "Stage": "ev.obs.configuration.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-Configuration.md\u0027 (obs.configuration.docs) validated successfully against OBS-001/OBS-101 with hash SHA256:2ea486a3218b268820750bf26de5d13a929f2d879086a23778ab0d922a23a03d.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "configuration",
+      "Stage": "ev.obs.configuration.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Configuration.json\u0027 (obs.configuration.evidence) validated successfully against OBS-001/OBS-101 with hash SHA256:d25aae1c99800a9a7a681ad7c0ca30e191963e0d6a44bfe5aa9a069642bcb4f4.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "configuration",
+      "Stage": "ev.obs.configuration.source",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027EnvironmentConfiguration.cs\u0027 (obs.configuration.source) validated successfully against OBS-001/OBS-101 with hash SHA256:44c6421e21ddb658457b84613e9316387cdb453d423adc7606696002825727ba.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "dashboards",
+      "Stage": "ev.obs.dashboards.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-Dashboards.md\u0027 (obs.dashboards.docs) validated successfully against OBS-007/OBS-107 with hash SHA256:9a206c5da2c9d1aa81bd58c3595a43e79cd2efede6a49456696abb93da1924d1.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "dashboards",
+      "Stage": "ev.obs.dashboards.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Dashboards.json\u0027 (obs.dashboards.evidence) validated successfully against OBS-007/OBS-107 with hash SHA256:0037695c33ad311ef76a6bc1c457d3d1bb7c50daa46ff84391a14aabf70237d3.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "dashboards",
+      "Stage": "ev.obs.dashboards.golden",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027grafana-golden-signals-dashboard.json\u0027 (obs.dashboards.golden.json) validated successfully against OBS-007/OBS-107 with hash SHA256:d5c455673cff2e241d7767c13b83b07e5e73b48c1dbd671afdf7c03c8ce6f09d.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "dashboards",
+      "Stage": "ev.obs.dashboards.provisioning",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027dashboard-provisioning.yaml\u0027 (obs.dashboards.provisioning.yaml) validated successfully against OBS-007/OBS-107 with hash SHA256:6f7d0d42748913d496439600d14d35bcbac56a9ba4149779997660b03216ff4a.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "documentation",
+      "Stage": "ev.obs.documentation.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Documentation.json\u0027 (obs.documentation.evidence) validated successfully against OBS-009/OBS-109 with hash SHA256:77b9d5c5a11b011929aca8fbc50fd10c50ea01edde13e357ed2f83e9b941daf5.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "documentation",
+      "Stage": "ev.obs.documentation.guide",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Observability-Architecture-Guide.md\u0027 (obs.documentation.architecture.guide) validated successfully against OBS-009/OBS-109 with hash SHA256:1d74dc115ea02df984d762aa931834d295907ba2b89fcd01fe64993d3d661473.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "documentation",
+      "Stage": "ev.obs.documentation.matrix",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027OBSERVABILITY-CANON-TRACEABILITY-MATRIX.md\u0027 (obs.documentation.traceability.matrix) validated successfully against OBS-009/OBS-109 with hash SHA256:eae96676575a5a57b76ff16a5000a1a7a7d69c3df600699e67baffb028016714.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "healthchecks",
+      "Stage": "ev.obs.healthchecks.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-HealthChecks.md\u0027 (obs.healthchecks.docs) validated successfully against OBS-005/OBS-105 with hash SHA256:8c1430972e6251b24e9a77a2a4e46510e28d91a485e0206274aa911f343900a3.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "healthchecks",
+      "Stage": "ev.obs.healthchecks.evidence",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-HealthChecks.json\u0027 (obs.healthchecks.evidence) validated successfully against OBS-005/OBS-105 with hash SHA256:72db900ac20c2ab6434d20dd82e14bff0233004b587d4fc1aa3ffc187c21b35b.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "healthchecks",
+      "Stage": "ev.obs.healthchecks.k8s",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027k8s-probes.yaml\u0027 (obs.healthchecks.k8s.yaml) validated successfully against OBS-005/OBS-105 with hash SHA256:19c1d6c012ea9829990985a142d9aa53a55ac3b28b8b2b8860d472ec73bc2cf1.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "healthchecks",
+      "Stage": "ev.obs.healthchecks.source",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027HealthChecksConfiguration.cs\u0027 (obs.healthchecks.source) validated successfully against OBS-005/OBS-105 with hash SHA256:16fa46ed200e87c287e368a125da5d930002f21b88d964620192b35c7cc4c463.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "logging",
+      "Stage": "ev.obs.logging.config",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027logging.json\u0027 (obs.logging.config.json) validated successfully against OBS-003/OBS-103 with hash SHA256:4b400ef1221f215e2268f27216c02ab51b936a7c7e068cb9685b97fc806ff11f.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "logging",
+      "Stage": "ev.obs.logging.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-Logging.md\u0027 (obs.logging.docs.readme) validated successfully against OBS-003/OBS-103 with hash SHA256:72a6679d928ed30b5f2823b1406300d92a2d35dbdef27f8e4a7436204d0dd26c.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "logging",
+      "Stage": "ev.obs.logging.report",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027ValidationReport-Logging.json\u0027 (obs.logging.evidence.report) validated successfully against OBS-003/OBS-103 with hash SHA256:912ae0186831e97ea67ad140231692aea6d80f32b25b252717fcc4d373078b17.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "logging",
+      "Stage": "ev.obs.logging.source",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027OpenTelemetryLogging.cs\u0027 (obs.logging.source.csharp) validated successfully against OBS-003/OBS-103 with hash SHA256:3ebb1ee471ac350ac46c419a558f69ed938b4e7bb1f5160c7444383d3796d136.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "metrics",
+      "Stage": "ev.obs.metrics.config",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027MeterConfiguration.cs\u0027 (obs.metrics.source.config) validated successfully against OBS-004/OBS-104 with hash SHA256:f1be32a9199b96fc85ca50735380700314e55f09955a651cdf1a4200cb8729ef.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "metrics",
+      "Stage": "ev.obs.metrics.prometheus",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Prometheus.yaml\u0027 (obs.metrics.config.prometheus) validated successfully against OBS-004/OBS-104 with hash SHA256:0abe44852746bc7cba525c543d61d0834f3f5f8ae9630115dee9bc97af8c6bc9.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "metrics",
+      "Stage": "ev.obs.metrics.report",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Metrics.json\u0027 (obs.metrics.evidence.report) validated successfully against OBS-004/OBS-104 with hash SHA256:0b09a80fde719fe7e71079887e003d6b75965901fcd128b5698bddc867c58eab.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "metrics",
+      "Stage": "ev.obs.metrics.source",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Metrics.cs\u0027 (obs.metrics.source.metrics) validated successfully against OBS-004/OBS-104 with hash SHA256:68257b3ca4f84fdd22211097e30ceb9f8ce569c0a8759210679bd2ebd328c737.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "tracing",
+      "Stage": "ev.obs.tracing.config",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027otlp-exporter-tracing.json\u0027 (obs.tracing.config.exporter) validated successfully against OBS-002/OBS-102 with hash SHA256:1b2d885f9cca6bd30c792cde91b7f2c0951779d0c06cf2727c14f67da56ef239.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "tracing",
+      "Stage": "ev.obs.tracing.docs",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027README-Tracing.md\u0027 (obs.tracing.docs.readme) validated successfully against OBS-002/OBS-102 with hash SHA256:54ef44afc9171271f6b57f880dc4e93098091544bd226b5f680145c5a0861286.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "tracing",
+      "Stage": "ev.obs.tracing.report",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Evidence-Tracing.json\u0027 (obs.tracing.evidence.report) validated successfully against OBS-002/OBS-102 with hash SHA256:d919521469c12065f0cad66ae76e605202440c00a5a8b1d24810e5834894cac3.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "tracing",
+      "Stage": "ev.obs.tracing.source",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027TracingConfiguration.cs\u0027 (obs.tracing.source.config) validated successfully against OBS-002/OBS-102 with hash SHA256:898b7976b95f107753b09e57dbec20f712bf36ebf00031c0acc8f56acf53940f.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "validation",
+      "Stage": "ev.obs.validation.engine",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027ObservabilityValidationEngine.cs\u0027 (obs.validation.engine) validated successfully against OBS-010/OBS-110 with hash SHA256:6d56c018d69a3b1706b9db569610be96cd26a98048d994ba657621ee6f1c15d3.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "validation",
+      "Stage": "ev.obs.validation.policy",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027validation-policy.json\u0027 (obs.validation.policy) validated successfully against OBS-010/OBS-110 with hash SHA256:aac9edef84db5281bf9190be73f49f0b66c3fb030dd988a44b47e827d2337b83.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    },
+    {
+      "PluginId": "observability",
+      "CapabilityId": "validation",
+      "Stage": "ev.obs.validation.summary",
+      "IsSuccess": true,
+      "Message": "Artifact \u0027Validation-Compliance-Summary.json\u0027 (obs.validation.summary) validated successfully against OBS-010/OBS-110 with hash SHA256:fc622515794d7c70f92df98c85004166288b1ad7f697a4bcf5092ccf3f832791.",
+      "Timestamp": "2024-07-03T09:46:40+00:00"
+    }
+  ],
+  "Certification": {
+    "PluginIdentity": {
+      "PluginId": "observability",
+      "Version": "1.0.0",
+      "Author": "SaaSFoundry Engineering",
+      "Fingerprint": "SHA256:4A9E8B7F1C2D3E5F0A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6E7F8A9B0C1D2E3F"
+    },
+    "PluginMetadata": {
+      "Id": "observability",
+      "Name": "SaaSFoundry Observability Engineering Plugin",
+      "Version": "1.0.0",
+      "Description": "Production observability plugin implementing canonical trace and metrics architectures.",
+      "Capabilities": [
+        "logging",
+        "metrics",
+        "tracing",
+        "healthchecks",
+        "collector",
+        "configuration",
+        "dashboards",
+        "alerts",
+        "documentation",
+        "validation"
+      ],
+      "Dependencies": [],
+      "Author": "SaaSFoundry Engineering",
+      "Compatibility": "SaaSFoundry.EngineeringWorkbench v1.0"
+    },
+    "CapabilityCount": 10,
+    "ArtifactCount": 37,
+    "TraceabilityCoverage": 100,
+    "GovernanceCoverage": 100,
+    "ValidationStatus": "CERTIFIED_COMPLIANT_V1",
+    "CertificationTimestamp": 1720000000000,
+    "CertificationHash": "SHA256:DE7F89568BE3F8452D423B448BB2B7410DA4F2AF9D9492DE6DEBA957B87EB2E5"
+  }
+}

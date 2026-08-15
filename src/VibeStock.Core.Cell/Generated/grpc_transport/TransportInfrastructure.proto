@@ -1,0 +1,19 @@
+syntax = "proto3";
+package SaaSFoundry.Transport;
+option csharp_namespace = "SaaSFoundry.Transport.Generated";
+
+service InfrastructureService {
+  rpc Ping (PingRequest) returns (PingResponse);
+  rpc ProcessCommand (CommandRequest) returns (CommandResponse);
+}
+
+message PingRequest {}
+message PingResponse { 
+  string cell_identity = 1; 
+}
+message CommandRequest { 
+  string payload = 1; 
+}
+message CommandResponse { 
+  string result = 1; 
+}

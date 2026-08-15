@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
-    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Application\SaaSFoundry.EngineeringWorkbench.Application.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -9,7 +9,7 @@ public sealed class PluginDiscoveryService
 
         return Directory
             .GetDirectories(pluginsRoot)
-            .Select(Path.GetFileName)
+            .Select(x => Path.GetFileName(x)!)
             .OrderBy(x=>x)
             .ToList();
     }

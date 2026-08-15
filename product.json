@@ -1,0 +1,39 @@
+{
+  "ProductId": "VibeStock",
+  "Name": "VibeStock",
+  "Cells": [
+    {
+      "CellId": "Core.Cell",
+      "Name": "Core.Cell",
+      "TargetPath": "src\\VibeStock.Core.Cell",
+      "Capabilities": [ "health", "auth_middleware", "logging", "connection", "grpc_transport" ]
+    },
+    {
+      "CellId": "Ingestor.Cell",
+      "Name": "Ingestor.Cell",
+      "TargetPath": "src\\VibeStock.Ingestor.Cell",
+      "Capabilities": [ "health", "auth_middleware", "logging", "connection", "grpc_transport", "import" ]
+    },
+    {
+      "CellId": "Bridge.Cell",
+      "Name": "Bridge.Cell",
+      "TargetPath": "src\\VibeStock.Bridge.Cell",
+      "Capabilities": [ "health", "auth_middleware", "logging", "connection", "grpc_transport" ]
+    },
+    {
+      "CellId": "System.Cell",
+      "Name": "System.Cell",
+      "TargetPath": "src\\VibeStock.System.Cell",
+      "Capabilities": [ "health", "logging", "jobstorage", "backgroundjob", "idempotency", "grpc_transport" ]
+    }
+  ],
+  "Communications": [
+    { "Source": "Core.Cell", "Destination": "Ingestor.Cell", "Mode": "Bidirectional" },
+    { "Source": "Core.Cell", "Destination": "Bridge.Cell", "Mode": "Bidirectional" },
+    { "Source": "Core.Cell", "Destination": "System.Cell", "Mode": "Outbound" },
+    { "Source": "Ingestor.Cell", "Destination": "System.Cell", "Mode": "Outbound" },
+    { "Source": "Bridge.Cell", "Destination": "System.Cell", "Mode": "Outbound" }
+  ]
+}
+
+

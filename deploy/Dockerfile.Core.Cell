@@ -1,0 +1,28 @@
+# VibeStock Core.Cell — NativeAOT container image
+# Hosts: Core infrastructure services, shared persistence, agent runtime foundation
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0 AS runtime
+
+WORKDIR /app
+
+# Copy the NativeAOT self-contained binary produced by:
+#   dotnet publish src/VibeStock.Core.Cell -c Release /p:PublishAot=true -r linux-x64
+COPY --chown=app:app publish/VibeStock.Core.Cell /app/VibeStock.Core.Cell
+
+RUN chmod +x /app/VibeStock.Core.Cell
+
+# Run as a non-root user
+RUN groupadd -r app && useradd -r -g app app
+USER app
+
+# Required environment variables (no defaults — must be supplied externally):
+#   DATABASE__CONNECTIONSTRING   — PostgreSQL connection string (secret)
+#   OTLP__ENDPOINT               — OpenTelemetry OTLP gRPC endpoint
+#   GRPC__HOST                   — Listen host for gRPC transport
+#   GRPC__PORT                   — Listen port (default 5003)
+#   MTLS__CERTPATH               — Path to mounted mTLS certificate (PEM)
+#   MTLS__KEYPATH                — Path to mounted mTLS private key (PEM)
+
+EXPOSE 5003
+
+ENTRYPOINT ["/app/VibeStock.Core.Cell"]

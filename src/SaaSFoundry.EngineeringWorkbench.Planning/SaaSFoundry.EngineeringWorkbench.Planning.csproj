@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Catalog\SaaSFoundry.EngineeringWorkbench.Catalog.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Execution\SaaSFoundry.EngineeringWorkbench.Execution.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+</Project>

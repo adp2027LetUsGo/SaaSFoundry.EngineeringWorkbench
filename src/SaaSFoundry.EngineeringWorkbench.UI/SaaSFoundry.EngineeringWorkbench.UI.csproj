@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Application\SaaSFoundry.EngineeringWorkbench.Application.csproj" />
@@ -6,6 +6,11 @@
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.PluginRuntime\SaaSFoundry.EngineeringWorkbench.PluginRuntime.csproj" />
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Validation\SaaSFoundry.EngineeringWorkbench.Validation.csproj" />
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Packaging\SaaSFoundry.EngineeringWorkbench.Packaging.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Catalog\SaaSFoundry.EngineeringWorkbench.Catalog.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Planning\SaaSFoundry.EngineeringWorkbench.Planning.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Governance\SaaSFoundry.EngineeringWorkbench.Governance.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Observability\SaaSFoundry.Plugins.Observability.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -13,6 +18,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);IL2026;IL3050;IL2104</NoWarn>
   </PropertyGroup>
 
 </Project>

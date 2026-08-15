@@ -1,0 +1,177 @@
+# =============================================================================
+# VibeStock — Docker Compose (Development / Local Oracle Validation)
+# =============================================================================
+# PURPOSE:
+#   Local environment for validating the VibeStock Cellular Architecture
+#   against a real PostgreSQL instance and an OTLP collector.
+#
+# USAGE:
+#   1. Copy .env.example → .env and populate all required secrets.
+#   2. Run ./build-aot.sh to produce the NativeAOT Cell binaries.
+#   3. docker compose build
+#   4. docker compose up
+#
+# ORACLE DEPLOYMENT NOTE:
+#   This compose file is for local/dev validation ONLY.
+#   For production Oracle Cloud deployment, replace this compose with the
+#   Oracle Container Instance, Oracle Kubernetes Engine (OKE), or equivalent
+#   compute manifests appropriate to the target Oracle infrastructure.
+#   See docs/VibeStock/09A-Production-Activation-Contract.md for requirements.
+#
+# SECURITY:
+#   No secrets are embedded in this file.
+#   All secrets are supplied via the .env file or an external secret manager.
+# =============================================================================
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # PostgreSQL — Persistence backend for all Cells
+  # ---------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # OTLP Collector — Telemetry receiver (Jaeger all-in-one for local dev)
+  # Replace with production OTLP endpoint for Oracle deployment.
+  # ---------------------------------------------------------------------------
+  otel-collector:
+    image: jaegertracing/all-in-one:latest
+    restart: unless-stopped
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "16686:16686" # Jaeger UI
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+
+  # ---------------------------------------------------------------------------
+  # VibeStock Core.Cell
+  # ---------------------------------------------------------------------------
+  vibestock-core:
+    build:
+      context: .
+      dockerfile: Dockerfile.Core.Cell
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE__CONNECTIONSTRING: ${DATABASE_CONNECTIONSTRING}
+      OTLP__ENDPOINT: http://otel-collector:4317
+      GRPC__HOST: 0.0.0.0
+      GRPC__PORT: 5003
+      MTLS__CERTPATH: /run/secrets/mtls_cert
+      MTLS__KEYPATH: /run/secrets/mtls_key
+    secrets:
+      - mtls_cert
+      - mtls_key
+    ports:
+      - "5003:5003"
+
+  # ---------------------------------------------------------------------------
+  # VibeStock Ingestor.Cell
+  # ---------------------------------------------------------------------------
+  vibestock-ingestor:
+    build:
+      context: .
+      dockerfile: Dockerfile.Ingestor.Cell
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      vibestock-core:
+        condition: service_started
+    environment:
+      DATABASE__CONNECTIONSTRING: ${DATABASE_CONNECTIONSTRING}
+      OTLP__ENDPOINT: http://otel-collector:4317
+      GRPC__HOST: 0.0.0.0
+      GRPC__PORT: 5000
+      MTLS__CERTPATH: /run/secrets/mtls_cert
+      MTLS__KEYPATH: /run/secrets/mtls_key
+    secrets:
+      - mtls_cert
+      - mtls_key
+    ports:
+      - "5000:5000"
+
+  # ---------------------------------------------------------------------------
+  # VibeStock System.Cell
+  # ---------------------------------------------------------------------------
+  vibestock-system:
+    build:
+      context: .
+      dockerfile: Dockerfile.System.Cell
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      vibestock-core:
+        condition: service_started
+    environment:
+      DATABASE__CONNECTIONSTRING: ${DATABASE_CONNECTIONSTRING}
+      AI__PROVIDER__APIKEY: ${AI_PROVIDER_APIKEY}
+      AI__PROVIDER__ENDPOINT: ${AI_PROVIDER_ENDPOINT}
+      AI__PROVIDER__MODEL: ${AI_PROVIDER_MODEL}
+      OTLP__ENDPOINT: http://otel-collector:4317
+      GRPC__HOST: 0.0.0.0
+      GRPC__PORT: 5001
+      MTLS__CERTPATH: /run/secrets/mtls_cert
+      MTLS__KEYPATH: /run/secrets/mtls_key
+    secrets:
+      - mtls_cert
+      - mtls_key
+    ports:
+      - "5001:5001"
+
+  # ---------------------------------------------------------------------------
+  # VibeStock Bridge.Cell
+  # ---------------------------------------------------------------------------
+  vibestock-bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile.Bridge.Cell
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      vibestock-core:
+        condition: service_started
+    environment:
+      DATABASE__CONNECTIONSTRING: ${DATABASE_CONNECTIONSTRING}
+      SHOPIFY__ACCESSTOKEN: ${SHOPIFY_ACCESSTOKEN}
+      SHOPIFY__BASEURL: ${SHOPIFY_BASEURL}
+      OTLP__ENDPOINT: http://otel-collector:4317
+      GRPC__HOST: 0.0.0.0
+      GRPC__PORT: 5002
+      MTLS__CERTPATH: /run/secrets/mtls_cert
+      MTLS__KEYPATH: /run/secrets/mtls_key
+    secrets:
+      - mtls_cert
+      - mtls_key
+    ports:
+      - "5002:5002"
+
+volumes:
+  postgres_data:
+
+# Docker secrets — mount from files on the host (not embedded in the image).
+# In production, replace with Oracle Vault or equivalent secret provider.
+secrets:
+  mtls_cert:
+    file: ${MTLS_CERT_FILE}
+  mtls_key:
+    file: ${MTLS_KEY_FILE}

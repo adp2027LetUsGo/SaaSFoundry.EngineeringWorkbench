@@ -1,0 +1,30 @@
+# VibeStock Ingestor.Cell — NativeAOT container image
+# Base: runtime-deps (minimal libc for NativeAOT self-contained binaries)
+# Build-time publish is performed outside this Dockerfile; the binary is copied in.
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0 AS runtime
+
+WORKDIR /app
+
+# Copy the NativeAOT self-contained binary produced by:
+#   dotnet publish src/VibeStock.Ingestor.Cell -c Release /p:PublishAot=true -r linux-x64
+COPY --chown=app:app publish/VibeStock.Ingestor.Cell /app/VibeStock.Ingestor.Cell
+
+RUN chmod +x /app/VibeStock.Ingestor.Cell
+
+# Run as a non-root user
+RUN groupadd -r app && useradd -r -g app app
+USER app
+
+# All runtime configuration is injected via environment variables at deploy time.
+# Required environment variables (no defaults — must be supplied externally):
+#   DATABASE__CONNECTIONSTRING   — PostgreSQL connection string (secret)
+#   OTLP__ENDPOINT               — OpenTelemetry OTLP gRPC endpoint
+#   GRPC__HOST                   — Listen host for gRPC transport
+#   GRPC__PORT                   — Listen port for gRPC transport (default 5000)
+#   MTLS__CERTPATH               — Path to mounted mTLS certificate (PEM)
+#   MTLS__KEYPATH                — Path to mounted mTLS private key (PEM)
+
+EXPOSE 5000
+
+ENTRYPOINT ["/app/VibeStock.Ingestor.Cell"]

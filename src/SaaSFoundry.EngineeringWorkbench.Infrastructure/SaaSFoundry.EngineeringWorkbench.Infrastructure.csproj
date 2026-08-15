@@ -1,8 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Application\SaaSFoundry.EngineeringWorkbench.Application.csproj" />
     <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Core\SaaSFoundry.EngineeringWorkbench.Core.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Observability\SaaSFoundry.Plugins.Observability.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.PluginRuntime\SaaSFoundry.EngineeringWorkbench.PluginRuntime.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Validation\SaaSFoundry.EngineeringWorkbench.Validation.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Packaging\SaaSFoundry.EngineeringWorkbench.Packaging.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.EngineeringWorkbench.Builder\SaaSFoundry.EngineeringWorkbench.Builder.csproj" />
+      <ProjectReference Include="..\SaaSFoundry.Plugins.API\SaaSFoundry.Plugins.API.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Authentication\SaaSFoundry.Plugins.Authentication.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.BackgroundProcessing\SaaSFoundry.Plugins.BackgroundProcessing.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Persistence\SaaSFoundry.Plugins.Persistence.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Import\SaaSFoundry.Plugins.Import.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.AI\SaaSFoundry.Plugins.AI.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Import.AI\SaaSFoundry.Plugins.Import.AI.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.Commerce.Shopify\SaaSFoundry.Plugins.Commerce.Shopify.csproj" />
+    <ProjectReference Include="..\SaaSFoundry.Plugins.ProductIntelligence\SaaSFoundry.Plugins.ProductIntelligence.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -12,3 +25,4 @@
   </PropertyGroup>
 
 </Project>
+

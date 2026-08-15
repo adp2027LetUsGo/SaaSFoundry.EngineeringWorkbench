@@ -1,4 +1,4 @@
-﻿namespace SaaSFoundry.EngineeringWorkbench.Builder.Models;
+namespace SaaSFoundry.EngineeringWorkbench.Builder.Models;
 
 public sealed class PluginDescriptor
 {
@@ -9,4 +9,6 @@ public sealed class PluginDescriptor
     public string Version { get; set; } = string.Empty;
 
     public List<PluginArtifact> Artifacts { get; set; } = [];
+    
+    public List<CapabilityRegistrationMetadata> Registrations { get; set; } = [];
 }
